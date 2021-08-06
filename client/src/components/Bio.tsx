@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import React from 'react'
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     smallerTitle: {
     },
