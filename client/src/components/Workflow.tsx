@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Typography,
   Paper
@@ -19,7 +19,7 @@ import {
   AccessAlarm as AccessAlarmIcon,
   Person as PersonIcon,
   DeveloperMode as DeveloperIcon,
-  Repeat as RepeatIcon
+  Check as CheckIcon
 } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
@@ -96,7 +96,7 @@ export default function BioSchools () {
     <TimelineItem>
       <TimelineSeparator>
         <TimelineDot className={classes.deployIcon}>
-          <RepeatIcon />
+          <CheckIcon />
         </TimelineDot>
       </TimelineSeparator>
       <TimelineContent>
