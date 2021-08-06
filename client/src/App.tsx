@@ -12,6 +12,7 @@ import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
 import {
   InfoRounded as QuestionIcon
 } from '@material-ui/icons'
+import Projects from './components/Projects';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,15 +24,17 @@ const useStyles = makeStyles((theme: Theme) =>
     containerBio: {
       textAlign: 'left',
       color: 'white',
-      marginBottom: '10vh',
+      marginBottom: '5vh',
       marginTop: '5vh'
     },
     containerWhite: {
       backgroundColor: 'white',
       textAlign: 'left',
       color: 'black',
-      marginBottom: '10vh',
       padding: '20px'
+    },
+    containerProjects: {
+      color: 'white'
     },
     bgOverlay: {
       position: 'absolute',
@@ -58,10 +61,17 @@ const useStyles = makeStyles((theme: Theme) =>
     title2: {
       borderBottom: '3px solid black',
     },
+    title2White: {
+      color: 'white',
+      borderBottom: '3px solid white',
+    },
     infoButton: {
       color: theme.palette.primary.light,
       marginLeft: '10px',
     },
+    spacer: {
+      marginBottom: '100vh'
+    }
   })
 );
 
@@ -89,19 +99,40 @@ function App() {
         <BlackWave />
       </Box>
 
-      <Container className={classes.containerWhite}>
-        <Typography variant="h3" component="h2">
-          <span className={classes.title2}>
-            Il mio WorkFlow 
-            <span className={classes.infoButton}>
-              <Tooltip title="Il mio processo di lavoro" arrow placement="top">
-                <QuestionIcon />
-              </Tooltip>
+      <Box className={classes.containerWhite}>
+        <Container>
+          <Typography variant="h3" component="h2">
+            <span className={classes.title2}>
+              Il mio WorkFlow 
+              <span className={classes.infoButton}>
+                <Tooltip title="Il mio processo di lavoro" arrow placement="top">
+                  <QuestionIcon />
+                </Tooltip>
+              </span>
             </span>
-          </span>
-        </Typography>
-        <Workflow />
-      </Container>
+          </Typography>
+          <Workflow />
+        </Container>
+      </Box>
+
+      <Box >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="white" d="M0,192L40,165.3C80,139,160,85,240,69.3C320,53,400,75,480,96C560,117,640,139,720,154.7C800,171,880,181,960,165.3C1040,149,1120,107,1200,106.7C1280,107,1360,149,1400,170.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+      </Box>
+      
+      <Box>
+        <Container className={classes.containerProjects}>
+          <Typography variant="h3" component="h2">
+            <span className={classes.title2White}>
+              I miei progetti
+            </span>
+          </Typography>
+          <Projects />
+        </Container>
+      </Box>
+
+      <div className={classes.spacer} />
     </div>
   );
 }
