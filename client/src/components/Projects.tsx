@@ -9,11 +9,13 @@ import {
   Paper
 } from '@material-ui/core'
 import { GITHUB_CACHE_KEY } from '../constants/Cache'
+import { GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE } from '../constants/Github'
 
 export default function Projects () {
   const [isLoading, setIsLoading] = React.useState(false)
   const [foundError, setFoundError] = React.useState(false)
   const [repositories, setRepositories] = React.useState<GithubRepo[]>([])
+  const [displayShowMore, setDisplayShowMore] = React.useState(false)
 
   // load data
   React.useState(() => {
@@ -61,6 +63,9 @@ export default function Projects () {
     // Grid item list
     const gridItem: ReactElement[] = []
 
+    // Set show more flag
+    setDisplayShowMore(repositories.length > GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE)
+
     // Create item list
     repositories.forEach((repo) => {
       gridItem.push(
@@ -103,6 +108,12 @@ export default function Projects () {
       <Box>
         <Grid container spacing={3}>
           <RepoItems />
+          { /* TODO: ORDINARE REPO IN BASE ALLA DATA DELL'ULTIMO COMMIT EFFETTUATO */ }
+          { displayShowMore && 
+            <div>
+              <p>DA INSERIRE SHOW MORE, MAX ELEMENTI MOSTRATI: {GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE}</p>
+            </div>
+          }
         </Grid>
       </Box>
     )  
