@@ -5,8 +5,7 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Fab,
-  Slide
+  Fab
 } from '@material-ui/core';
 
 import {
