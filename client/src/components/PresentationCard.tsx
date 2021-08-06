@@ -3,7 +3,6 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 import {
   Box,
-  Paper,
   Typography,
   Link,
   Tooltip
@@ -40,14 +39,14 @@ export default function PresentationCard () {
   const classes = useStyles()
 
   return (
-    <Paper id="presentationCard" className={classes.wrapper}>
+    <Box id="presentationCard" className={classes.wrapper}>
       <h1 className={classes.title}>Luca Di Bello</h1>
       <small>App & Web Developer</small>
       <br />
       <Box className={classes.socialIcons}>
         <Typography display="inline">
           <Link href="https://github.com/lucadibello" target="_blank">
-            <Tooltip title="GitHub">
+            <Tooltip title="GitHub" arrow>
               <GitHubIcon className={classes.spaceAround}/>
             </Tooltip>
           </Link>
@@ -55,22 +54,20 @@ export default function PresentationCard () {
 
         <Typography display="inline">
           <Link href="https://www.instagram.com/lucaa_dibello/" target="_blank">
-            <Tooltip title="Instagram">
+            <Tooltip title="Instagram" arrow>
               <InstagramIcon className={classes.spaceAround}/>
             </Tooltip>
           </Link>
         </Typography>
 
         <Typography display="inline">
-          <Link href="#" target="_blank">
-            <Tooltip title="Email">
+          <Link href="mailto:info@lucadibello.ch" target="_blank">
+            <Tooltip title="Email" arrow>
               <EmailIcon className={classes.spaceAround}/>
             </Tooltip>
           </Link>
         </Typography>
-
-        
       </Box>
-    </Paper>
+    </Box>
   );
 }

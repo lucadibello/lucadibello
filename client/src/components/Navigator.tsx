@@ -5,14 +5,15 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Fab
+  Fab,
+  Slide
 } from '@material-ui/core';
 
 import {
   Menu as MenuIcon,
-  Add as AddIcon,
   Search as SearchIcon,
-  More as MoreIcon
+  More as MoreIcon,
+  MailOutlineOutlined as MailIcon
 } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Navigator () {
+export default function Navigator (props: any) {
   const classes = useStyles();
 
   return (
@@ -59,7 +60,7 @@ export default function Navigator () {
             <MenuIcon />
           </IconButton>
           <Fab color="secondary" aria-label="add" className={classes.fabButton}>
-            <AddIcon />
+            <MailIcon />
           </Fab>
           <div className={classes.grow} />
           <IconButton color="inherit">
