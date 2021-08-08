@@ -125,7 +125,7 @@ function App() {
         <Container className={classes.containerProjects}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2White}>
-              I miei progetti
+              I miei ultimi progetti
             </span>
           </Typography>
           <Projects />
@@ -140,13 +140,7 @@ function App() {
 /*
 
 TOPICS:
-
-- Bio
-- Portfolio
 - Technologies I usually use
-- GitHub repositories
--
-
 */
 
 

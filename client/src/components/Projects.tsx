@@ -5,17 +5,68 @@ import * as Cache from '../services/CacheService'
 
 import {
   Grid,
+  Typography,
+  Link,
   Box,
-  Paper
+  Card,
+  CardActions,
+  CardContent,
+  Button,
+  Container
 } from '@material-ui/core'
 import { GITHUB_CACHE_KEY } from '../constants/Cache'
-import { GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE } from '../constants/Github'
+import { GITHUB_PERSONAL_PROFILE, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE } from '../constants/Github'
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    repoTitle: {
+      color: 'black',
+      fontWeight: 'bold',
+      textDecoration: 'none !important',
+    },
+    gridItem: {
+      padding: '5px',
+      flex: '50%',
+      height: '100% !important'
+    },
+    gridContainer: {
+      margin: '0 !important',
+      padding: '20px'
+    },
+    fullWidth: {
+      width: '100%'
+    },
+    cardDescription: {
+      marginTop: '10px'
+    },
+    showMoreContainer: {
+      color: 'white'
+    }
+  })
+)
 
 export default function Projects () {
   const [isLoading, setIsLoading] = React.useState(false)
   const [foundError, setFoundError] = React.useState(false)
   const [repositories, setRepositories] = React.useState<GithubRepo[]>([])
   const [displayShowMore, setDisplayShowMore] = React.useState(false)
+
+  // Load style classes
+  const classes = useStyles()
+
+  const sortRepositories = (repositories: GithubRepo[], maxRepositoriesShown: number = 4): GithubRepo[] => {
+    // Remove repositories without description 
+    repositories = repositories
+      .filter(repo => repo.description !== null && repo.description !== "")
+    
+    // Sort repositories
+    repositories.sort((a, b) => {
+      return (new Date(b.updated_at)).getTime() - (new Date(a.updated_at)).getTime()
+    })
+
+    return repositories.slice(0, maxRepositoriesShown);
+  }
 
   // load data
   React.useState(() => {
@@ -28,9 +79,11 @@ export default function Projects () {
 
     if (repositoriesCache != null) {
       // Data found in cache
-      setRepositories(repositoriesCache.data)
+      setRepositories(sortRepositories(repositoriesCache.data, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE))
       // Remove loading flag
       setIsLoading(false)
+      // Set show more flag
+      setDisplayShowMore(repositoriesCache.data.length > GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE)
     } else {
       // Get repositories from APIs
       getRepositories()
@@ -38,7 +91,9 @@ export default function Projects () {
           console.log("DATA FOUND: ", data)
           if (data !== undefined && data != null) {
             // Save repositories data
-            setRepositories(data)
+            setRepositories(sortRepositories(data, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE))
+            // Set show more flag
+            setDisplayShowMore(data.length > GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE)
             // Cache data for future reuse
             Cache.cacheData(GITHUB_CACHE_KEY, JSON.stringify(data), getRepositories)
           } else {
@@ -46,7 +101,6 @@ export default function Projects () {
             console.log("Error: no data returned from API")
             setRepositories([])
           }
-          
         })
         .catch((err) => {
           // Log error
@@ -63,25 +117,37 @@ export default function Projects () {
     // Grid item list
     const gridItem: ReactElement[] = []
 
-    // Set show more flag
-    setDisplayShowMore(repositories.length > GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE)
-
     // Create item list
     repositories.forEach((repo) => {
       gridItem.push(
-        <Grid item xl={12} key={repo.id}>
-          <Paper>
-            {repo.name}
-          </Paper>
+        <Grid item xs={6} key={repo.id} className={classes.gridItem}>
+          <Card variant="outlined">
+            <CardContent>
+              <Typography color="textSecondary" gutterBottom>
+                <Link href={repo.html_url} target="_blank" className={classes.repoTitle}>
+                  {repo.name}
+                </Link>
+              </Typography>
+              <Typography component="p" color="textSecondary">
+                { repo.language } &bull; { (new Date(repo.updated_at)).getFullYear() }
+              </Typography>
+              <Typography variant="body2" component="p" className={classes.cardDescription}>
+                { repo.description }
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Vai al progetto</Button>
+            </CardActions>
+          </Card>
         </Grid>
       )
     });
 
     return (
-      <div>
+      <React.Fragment>
         { gridItem }
-      </div>
-    );
+      </React.Fragment>
+    )
   }
 
   if (isLoading) {
@@ -106,16 +172,23 @@ export default function Projects () {
   } else {
     return (
       <Box>
-        <Grid container spacing={3}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          className={classes.gridContainer}
+        >
           <RepoItems />
-          { /* TODO: ORDINARE REPO IN BASE ALLA DATA DELL'ULTIMO COMMIT EFFETTUATO */ }
-          { displayShowMore && 
-            <div>
-              <p>DA INSERIRE SHOW MORE, MAX ELEMENTI MOSTRATI: {GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE}</p>
-            </div>
-          }
         </Grid>
-      </Box>
+
+        { displayShowMore && 
+          <Container className={classes.showMoreContainer}>
+            <Button variant="contained" color="primary" href={GITHUB_PERSONAL_PROFILE} target="_blank" rel="noopener">
+              Guarda tutti i progetti
+            </Button>
+          </Container>
+        }
+     </Box>
     )  
   }
 }
