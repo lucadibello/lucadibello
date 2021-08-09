@@ -5,6 +5,8 @@ import PresentationCard from './components/PresentationCard';
 import Bio from './components/Bio';
 import Workflow from './components/Workflow';
 import BlackWave from './components/BlackWave';
+import Projects from './components/Projects';
+import Services from './components/Services';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
@@ -12,7 +14,6 @@ import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
 import {
   InfoRounded as QuestionIcon
 } from '@material-ui/icons'
-import Projects from './components/Projects';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -34,7 +35,8 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: '20px'
     },
     containerProjects: {
-      color: 'white'
+      color: 'white',
+      marginBottom: '10vh'
     },
     bgOverlay: {
       position: 'absolute',
@@ -115,7 +117,7 @@ function App() {
         </Container>
       </Box>
 
-      <Box >
+      <Box>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="white" d="M0,192L40,165.3C80,139,160,85,240,69.3C320,53,400,75,480,96C560,117,640,139,720,154.7C800,171,880,181,960,165.3C1040,149,1120,107,1200,106.7C1280,107,1360,149,1400,170.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
@@ -130,6 +132,29 @@ function App() {
           </Typography>
           <Projects />
         </Container>
+      </Box>
+
+      <Box className={classes.waveContainer}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#161819" d="M0,32L48,69.3C96,107,192,181,288,202.7C384,224,480,192,576,160C672,128,768,96,864,96C960,96,1056,128,1152,133.3C1248,139,1344,117,1392,106.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+      </Box>
+
+      <Box className={classes.containerWhite}>
+        <Container>
+          <Typography variant="h3" component="h2">
+            <span className={classes.title2}>
+              Servizi
+            </span>
+          </Typography>
+          <Services />
+        </Container>
+      </Box>
+
+      <Box>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#FFF" d="M0,288L60,250.7C120,213,240,139,360,112C480,85,600,107,720,149.3C840,192,960,256,1080,245.3C1200,235,1320,149,1380,106.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
       </Box>
 
       <div className={classes.spacer} />
