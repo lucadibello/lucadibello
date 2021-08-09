@@ -3,6 +3,15 @@ import React from 'react'
 
 
 export default function Services () {
+
+  const serviceCard = (): React.ReactElement => {
+    return (
+      <Box>
+        Test
+      </Box>
+    )
+  }
+
   return (
     <Box>
       <p>
