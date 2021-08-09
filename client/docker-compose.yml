@@ -23,7 +23,7 @@ services:
     command: "certonly --verbose --webroot --non-interactive --agree-tos --renew-by-default \
     --preferred-challenges http-01 --server https://acme-v02.api.letsencrypt.org/directory \
     --text --email info@lucadibello.ch \
-    -w /etc/letsencrypt/well-known -d lucadibello.ddns.net"
+    -w /etc/letsencrypt/well-known -d lucadibello.ddns.net -v"
     container_name: lucadibello-certbot
     environment:
       CERTBOT_EMAIL: info@lucadibello.ch
