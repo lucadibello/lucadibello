@@ -16,6 +16,9 @@ services:
       - /etc/letsencrypt/well-known:/data/well-known
   certbot: 
     image: certbot/certbot:arm32v6-latest
+    depends_on: [
+      nginx
+    ]
     restart: unless-stopped
     command: "certonly --verbose --webroot --non-interactive --agree-tos --renew-by-default \
     --preferred-challenges http-01 --server https://acme-v02.api.letsencrypt.org/directory \
