@@ -48,6 +48,7 @@ const useStyles = makeStyles(() =>
 
 export default function Projects () {
   const [isLoading, setIsLoading] = React.useState(false)
+  const [lastFetch, setLastFetch] = React.useState<null | number>(null)
   const [foundError, setFoundError] = React.useState(false)
   const [repositories, setRepositories] = React.useState<GithubRepo[]>([])
   const [displayShowMore, setDisplayShowMore] = React.useState(false)
@@ -80,6 +81,8 @@ export default function Projects () {
     if (repositoriesCache != null) {
       // Data found in cache
       setRepositories(sortRepositories(repositoriesCache.data, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE))
+      // Set last fetch time
+      setLastFetch(repositoriesCache.cachedAt)
       // Remove loading flag
       setIsLoading(false)
       // Set show more flag
@@ -94,6 +97,8 @@ export default function Projects () {
             setRepositories(sortRepositories(data, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE))
             // Set show more flag
             setDisplayShowMore(data.length > GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE)
+            // Set last fetch time
+            setLastFetch(Date.now())
             // Cache data for future reuse
             Cache.cacheData(GITHUB_CACHE_KEY, JSON.stringify(data), getRepositories)
           } else {
@@ -171,19 +176,30 @@ export default function Projects () {
     )
   } else {
     return (
-      <Box>
+      <Box >
+        {
+          lastFetch !== null &&
+          <p>Ultimo aggiornamento: { new Date(lastFetch).toLocaleTimeString() }</p>
+        }
         <Grid
           container
           direction="row"
           justifyContent="space-around"
           className={classes.gridContainer}
+          id="projects-container"
         >
           <RepoItems />
         </Grid>
 
         { displayShowMore && 
-          <Container className={classes.showMoreContainer}>
-            <Button variant="contained" color="primary" href={GITHUB_PERSONAL_PROFILE} target="_blank" rel="noopener">
+          <Container id="project-view-all-btn" className={classes.showMoreContainer}>
+            <Button
+              variant="contained"
+              color="primary"
+              href={GITHUB_PERSONAL_PROFILE}
+              target="_blank"
+              rel="noopener"
+            >
               Guarda tutti i progetti
             </Button>
           </Container>
