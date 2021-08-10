@@ -32,6 +32,9 @@ const useStyles = makeStyles(() =>
       borderBottom: '1px solid #FFF',
       paddingBottom: '1px',
       transition: '0.5s ease-in-out',
+    },
+    endPhrase: {
+      marginTop: "30px"
     }
   })
 );
@@ -49,7 +52,7 @@ export default function Bio () {
         <span className={classes.initialLetter}>C</span><span className={classes.titleWelcome}>iao!</span>
       </Typography>
       <Box className={classes.bioBody}>
-        <Typography variant="h3" component="h3" paragraph={true}>
+        <Typography variant="h4" component="h3" paragraph={true}>
           Mi chiamo&nbsp;
           <span 
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
@@ -79,7 +82,19 @@ export default function Bio () {
           >
             Molte delle mie conoscenze sono state apprese da autoditatta
           </span>
-          ,&nbsp;tramite progetti personali e per privati. Dai un occhio al mio portfolio!
+          &nbsp;tramite progetti personali e per terzi.
+        </Typography>
+
+        <Typography className={classes.endPhrase} variant="h5" component="p" paragraph={true}>
+          Dai un&nbsp;
+          <span
+            className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
+            onMouseEnter={() => setHightlited(true)}
+            onMouseLeave={() => setHightlited(false)}
+          >
+            occhio ai miei progetti
+          </span>
+          &#33;
         </Typography>
       </Box>
     </Box>
