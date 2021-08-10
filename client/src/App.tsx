@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     app: {
     },
-    img: {
+    homepageImg: {
       width: "100%"
     },
     containerBio: {
@@ -91,7 +91,7 @@ function App() {
       </Paper>
 
       { /* Image background */ }
-      <img src="/assets/bg.jpg" alt="background" className={classes.img} draggable={false}/>
+      <img id="homepageBg" src="/assets/bg.jpg" alt="background" className={classes.homepageImg} draggable={false}/>
       
       <Container className={classes.containerBio}>
         <Bio />
