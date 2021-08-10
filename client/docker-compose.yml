@@ -21,15 +21,12 @@ services:
     ]
     restart: unless-stopped
     command: "certonly --verbose --webroot --non-interactive --agree-tos --renew-by-default \
-    --preferred-challenges http-01 --server https://acme-v02.api.letsencrypt.org/directory \
+    --preferred-challenges http-01 --server https://acme-staging-v02.api.letsencrypt.org/directory \
     --text --email info@lucadibello.ch \
-    -w /data/well-known -d lucadibello.ddns.net -v"
+    -w /etc/letsencrypt/well-known -d lucadibello.ddns.net -v --debug-challenges"
     container_name: lucadibello-certbot
     environment:
       CERTBOT_EMAIL: info@lucadibello.ch
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
-      - /etc/letsencrypt/well-known:/data/well-known
       - /var/lib/letsencrypt:/var/lib/letsencrypt
-volumes:
-  nginx_secrets:
