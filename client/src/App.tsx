@@ -59,7 +59,8 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: 'auto'
     },
     waveContainer: {
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      width: '100%'
     },
     title2: {
       borderBottom: '3px solid black',
@@ -81,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     imageContainer: {
       overflow: 'hidden'
-    }
+    },
   })
 );
 
