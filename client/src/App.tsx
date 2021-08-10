@@ -7,6 +7,7 @@ import Workflow from './components/Workflow';
 import BlackWave from './components/BlackWave';
 import Projects from './components/Projects';
 import Services from './components/Services';
+import PoweredBy from './components/PoweredBy';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
@@ -73,6 +74,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     spacer: {
       marginBottom: '100vh'
+    },
+    containerPoweredBy: {
+      textAlign: 'center',
+      color: 'white'
+    },
+    imageContainer: {
+      overflow: 'hidden'
     }
   })
 );
@@ -91,7 +99,9 @@ function App() {
       </Paper>
 
       { /* Image background */ }
-      <img id="homepageBg" src="/assets/bg.jpg" alt="background" className={classes.homepageImg} draggable={false}/>
+      <Box className={classes.imageContainer}>
+        <img id="homepageBg" src="/assets/bg.jpg" alt="background" className={classes.homepageImg} draggable={false}/>
+      </Box>
       
       <Container className={classes.containerBio}>
         <Bio />
@@ -155,6 +165,12 @@ function App() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#FFF" d="M0,288L60,250.7C120,213,240,139,360,112C480,85,600,107,720,149.3C840,192,960,256,1080,245.3C1200,235,1320,149,1380,106.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
+      </Box>
+
+      <Box>
+        <Container className={classes.containerPoweredBy}>
+          <PoweredBy />
+        </Container>
       </Box>
 
       <div className={classes.spacer} />
