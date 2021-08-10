@@ -40,10 +40,6 @@ export default function PoweredBy () {
         <Box className={classes.poweredLogo}>
           <DockerLogo />
         </Box>
-        
-        <Typography>
-          with ❤️
-        </Typography>
       </Box>
     </React.Fragment>
   );
