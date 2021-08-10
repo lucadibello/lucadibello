@@ -136,7 +136,7 @@ export default function Projects () {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Vai al progetto</Button>
+              <Button size="small" href={repo.html_url} target="_blank" rel="noopener">Vai al progetto</Button>
             </CardActions>
           </Card>
         </Grid>
