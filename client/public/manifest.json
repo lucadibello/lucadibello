@@ -1,25 +1,69 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Luca Di Bello",
+  "name": "Luca Di Bello - Official Website",
+  "description": "Luca Di Bello - App & Web Developer",
   "icons": [
     {
+      "src": "favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "favicons/maskable/logo48.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "48x48",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "favicons/maskable/logo72.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "72x72",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/maskable/logo96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/maskable/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/maskable/logo384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/maskable/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/maskable/logo.png",
+      "type": "image/png",
+      "sizes": "1300x1300",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "background_color": "#161819"
 }
