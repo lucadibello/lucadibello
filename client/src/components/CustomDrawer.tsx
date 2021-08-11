@@ -13,10 +13,6 @@ import {
 } from '@material-ui/core';
 
 import {
-  MailOutlineOutlined as MailIcon,
-  EmojiPeople as PeopleIcon,
-  Work as WorkIcon,
-  AccountTree as ProjectIcon,
   Close as CloseIcon,
   SvgIconComponent
 } from '@material-ui/icons';
@@ -26,32 +22,15 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 interface LucaDrawerProps {
   open: boolean,
   onClose: React.ReactEventHandler<{}>,
-  onOpen: React.ReactEventHandler<{}>
+  onOpen: React.ReactEventHandler<{}>,
+  items: DrawerItem[]
 }
 
 interface DrawerItem {
   text: string,
-  icon: SvgIconComponent
+  icon: SvgIconComponent,
+  ref: any
 }
-
-const listItems: DrawerItem[] = [
-  {
-    text: "Bio",
-    icon: PeopleIcon
-  },
-  {
-    text: "WorkFlow",
-    icon: ProjectIcon
-  },
-  {
-    text: "Progetti",
-    icon: WorkIcon
-  },
-  {
-    text: "Servizi offerti",
-    icon: MailIcon
-  },
-]
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,8 +59,15 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
+const scrollToRef = (ref: React.MutableRefObject<HTMLDivElement>, close: Function) => {
+  ref.current.scrollIntoView({behavior: 'smooth'})
+}
+
 export default function CustomDrawer (props: LucaDrawerProps) {
+  // Load classes
   const classes = useStyles()
+
+  // Return web page
   return (
     <nav aria-label="swipable menu">
       <SwipeableDrawer
@@ -103,8 +89,8 @@ export default function CustomDrawer (props: LucaDrawerProps) {
           </svg>
         </Box>
         <List>
-          {listItems.map((item) => (
-            <ListItem button key={item.text} className={classes.listItem}>
+          {props.items.map((item) => (
+            <ListItem button key={item.text} className={classes.listItem} onClick={() => scrollToRef(item.ref, props.onClose)}>
               <ListItemIcon>
                 <SvgIcon component={item.icon} />
               </ListItemIcon>
