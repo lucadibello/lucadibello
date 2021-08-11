@@ -1,5 +1,9 @@
 import React from 'react';
+
+// Page styles
 import './App.css';
+
+// Personal components
 import Navigator from './components/Navigator'
 import PresentationCard from './components/PresentationCard';
 import Bio from './components/Bio';
@@ -8,18 +12,13 @@ import BlackWave from './components/BlackWave';
 import Projects from './components/Projects';
 import Services from './components/Services';
 import PoweredBy from './components/PoweredBy';
+import CustomDrawer from './components/CustomDrawer';
 
+// Material-UI components
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
 
-
-// Init smoothscroll polyfill
-import smoothscroll from 'smoothscroll-polyfill';
-
-import {
-} from '@material-ui/icons'
-import CustomDrawer from './components/CustomDrawer';
-
+// Material-UI Icons
 import {
   InfoRounded as QuestionIcon,
   MailOutlineOutlined as MailIcon,
@@ -27,6 +26,13 @@ import {
   Work as WorkIcon,
   AccountTree as ProjectIcon
 } from '@material-ui/icons';
+
+// Load smoothscroll polyfill
+import smoothscroll from 'smoothscroll-polyfill';
+
+// Load i18n + translations
+import i18n from 'i18n-js'
+import translations from './constants/Translations';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -101,9 +107,16 @@ const useStyles = makeStyles((theme: Theme) =>
 // Init smoothscroll polyfill
 smoothscroll.polyfill()
 
+// Init i18n
+i18n.translations = translations // set translations
+i18n.fallbacks = true // enable fallbacks if language not defined go to main
+
 function App() {
   const classes = useStyles()
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false)
+
+  // Set i18n language dinamically
+  i18n.locale = window.navigator.language // set local language pack
 
   /* Title refs */
   const bioElemRef = React.createRef<HTMLDivElement>()
@@ -118,22 +131,22 @@ function App() {
         open={isDrawerOpen}
         items={[
           {
-            text: "Bio",
+            text: i18n.t("Bio"),
             icon: PeopleIcon,
             ref: bioElemRef
           },
           {
-            text: "WorkFlow",
+            text: i18n.t("WorkFlow"),
             icon: ProjectIcon,
             ref: workflowElemRef
           },
           {
-            text: "Progetti",
+            text: i18n.t("Progetti"),
             icon: WorkIcon,
             ref: projectsElemRef
           },
           {
-            text: "Servizi & Skills",
+            text: i18n.t("Servizi & Skills"),
             icon: MailIcon,
             ref: servicesElemRef
           }
@@ -169,9 +182,9 @@ function App() {
         <Container ref={workflowElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
-              Il mio WorkFlow 
+              {i18n.t("Il mio WorkFlow")}
               <span className={classes.infoButton}>
-                <Tooltip title="Il mio processo di lavoro" arrow placement="top">
+                <Tooltip title={i18n.t("Il mio processo di lavoro")} arrow placement="top">
                   <QuestionIcon />
                 </Tooltip>
               </span>
@@ -191,7 +204,7 @@ function App() {
         <Container className={classes.containerProjects} ref={projectsElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2White}>
-              I miei ultimi progetti
+              {i18n.t("I miei ultimi progetti")}
             </span>
           </Typography>
           <Projects />
@@ -208,7 +221,7 @@ function App() {
         <Container ref={servicesElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
-              Servizi &amp; Skills
+              {i18n.t("Servizi & Skills")}
             </span>
           </Typography>
           <Services />
