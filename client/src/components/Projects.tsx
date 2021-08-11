@@ -141,7 +141,26 @@ export default function Projects () {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" href={repo.html_url} target="_blank" rel="noopener">Vai al progetto</Button>
+              <Button 
+                size="small" 
+                href={repo.html_url} 
+                target="_blank"
+                rel="noopener"
+                color="primary"
+                variant="contained"
+              >
+                Vai al progetto
+              </Button>
+              { repo.homepage !== "" && 
+                <Button 
+                  size="small"
+                  href={repo.homepage}
+                  target="_blank"
+                  rel="noopener"
+                  variant="contained"
+                  color="secondary"
+                >Vai al sito web</Button>
+              }
             </CardActions>
           </Card>
         </Grid>
