@@ -52,10 +52,18 @@ export default function Navigator (props: any) {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <React.Fragment>  
       <AppBar position="fixed" color="primary" className={classes.appBar}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="open drawer">
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open menu"
+            role="presentation"
+            component="span"
+            onClick={props.onMenuToggle}
+            onKeyDown={props.onMenuToggle}
+          >
             <MenuIcon />
           </IconButton>
           <Fab color="secondary" aria-label="add" className={classes.fabButton}>
