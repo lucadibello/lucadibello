@@ -1,6 +1,7 @@
 import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
+import i18n from 'i18n-js'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -48,11 +49,11 @@ export default function Bio () {
   return (
     <Box>
       <Typography variant="h1" component="h2" paragraph={true}>
-        <span className={classes.initialLetter}>C</span><span className={classes.titleWelcome}>iao!</span>
+        <span className={classes.initialLetter}>{i18n.t("BioC")}</span><span className={classes.titleWelcome}>{i18n.t("BioIao")}!</span>
       </Typography>
       <Box className={classes.bioBody}>
         <Typography variant="h4" component="h3" paragraph={true}>
-          Mi chiamo&nbsp;
+          {i18n.t("Mi chiamo")}&nbsp;
           <span 
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
@@ -63,13 +64,13 @@ export default function Bio () {
         </Typography>
         
         <Typography variant="h5" component="p" paragraph={true}>
-          Il mondo dell'informatica mi appassiona sin da quando ho 6 anni. Attualmente sto frequentando il corso di&nbsp;
+          {i18n.t("BioFirstPhrase")}&nbsp;
           <span
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            Bachelor in Ingegeria Informatica alla SUPSI
+            {i18n.t("Bachelor in Ingegeria Informatica alla SUPSI")}
           </span>
         </Typography>
 
@@ -79,19 +80,19 @@ export default function Bio () {
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            Molte delle mie conoscenze sono state apprese da autoditatta
+            {i18n.t("Molte delle mie conoscenze sono state apprese da autoditatta")}
           </span>
-          &nbsp;tramite progetti personali e per terzi.
+          &nbsp;{i18n.t("tramite progetti personali e per terzi")}.
         </Typography>
 
         <Typography className={classes.endPhrase} variant="h5" component="p" paragraph={true}>
-          Dai un&nbsp;
+          {i18n.t("Dai un")}&nbsp;
           <span
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            occhio ai miei progetti
+            {i18n.t("occhio ai miei progetti")}
           </span>
           &#33;
         </Typography>
