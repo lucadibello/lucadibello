@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import i18n from 'i18n-js'
+
 import {
   Typography,
   Paper
@@ -55,9 +57,9 @@ export default function BioSchools () {
       <TimelineContent>
         <Paper elevation={3} className={classes.paper}>
           <Typography variant="h6" component="h2" className={classes.titleBold}>
-            Nuova richiesta
+            {i18n.t("Nuova richiesta")}
           </Typography>
-          <Typography>Richiesta di lavoro ricevuta</Typography>
+          <Typography>{i18n.t("Richiesta di lavoro ricevuta")}</Typography>
         </Paper>
       </TimelineContent>
     </TimelineItem>
@@ -71,9 +73,9 @@ export default function BioSchools () {
       <TimelineContent>
         <Paper elevation={3} className={classes.paper}>
           <Typography variant="h6" component="h1" className={classes.titleBold}>
-            Colloquio con il cliente
+            {i18n.t("Colloquio con il cliente")}
           </Typography>
-          <Typography>Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto</Typography>
+          <Typography>{i18n.t("Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto")}</Typography>
         </Paper>
       </TimelineContent>
     </TimelineItem>
@@ -87,9 +89,9 @@ export default function BioSchools () {
       <TimelineContent>
         <Paper elevation={3} className={classes.paper}>
           <Typography variant="h6" component="h1" className={classes.titleBold}>
-            Sviluppo
+            {i18n.t("Sviluppo")}
           </Typography>
-          <Typography>Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro.</Typography>
+          <Typography>{i18n.t("Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro")}</Typography>
         </Paper>
       </TimelineContent>
     </TimelineItem>
@@ -102,9 +104,9 @@ export default function BioSchools () {
       <TimelineContent>
         <Paper elevation={3} className={classes.paper}>
           <Typography variant="h6" component="h1" className={classes.titleBold}>
-            Consegna
+            {i18n.t("Consegna")}
           </Typography>
-          <Typography>Prodotto consegnato al cliente</Typography>
+          <Typography>{i18n.t("ConsegnaDescrizione")}</Typography>
         </Paper>
       </TimelineContent>
     </TimelineItem>

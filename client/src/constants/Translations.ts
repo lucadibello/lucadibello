@@ -16,6 +16,15 @@ const translations = {
     "tramite progetti personali e per terzi": "through personal and third party projects",
     "Dai un": "Take a",
     "occhio ai miei progetti": "look at my projects",
+    "Nuova richiesta": "New request", 
+    "Richiesta di lavoro ricevuta": "Job application received",
+    "Colloquio con il cliente": "Colloquio con il cliente",
+    "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto": "Analysis of product requirements via an in-person or remote interview",
+    "Sviluppo": "Development",
+    "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Product development process where the customer can see the status of the work at any time",
+    "Consegna": "Delivery",
+    "ConsegnaDescrizione": "Testing of all product features and lastly delivery to the customer in person or remotely",
+
   },
   it: {
     Bio: 'Su di me',
@@ -34,6 +43,15 @@ const translations = {
     "tramite progetti personali e per terzi": "tramite progetti personali e per terzi",
     "Dai un": "Dai un",
     "occhio ai miei progetti": "occhio ai miei progetti",
+    "Nuova richiesta": "Nuova richiesta",
+    "Richiesta di lavoro ricevuta": "Richiesta di lavoro ricevuta",
+    "Colloquio con il cliente": "Customer interview",
+    "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto": "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto",
+    "Sviluppo": "Sviluppo",
+    "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro",
+    "Consegna": "Consegna",
+    "ConsegnaDescrizione": "Testing di tutte le funzionalità del prodotto ed infine la consegna al cliente (di persona / da remoto)",
+  
   },
   de: {
     Bio: 'Über mich',
@@ -52,6 +70,15 @@ const translations = {
     "tramite progetti personali e per terzi": "durch eigene Projekte und für Dritte",
     "Dai un": "Werfen Sie",
     "occhio ai miei progetti": "einen Blick auf meine Projekte",
+    "Nuova richiesta": "Neue Anfrage",
+    "Richiesta di lavoro ricevuta": "Stellengesuch erhalten",
+    "Colloquio con il cliente": "Kundeninterview",
+    "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto": "Analyse der Produktanforderungen durch ein persönliches oder ferngesteuertes Interview",
+    "Sviluppo": "Entwicklung",
+    "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Produktentwicklungsprozess, bei dem der Kunde jederzeit den Stand der Arbeit einsehen kann",
+    "Consegna": "Lieferung",
+    "ConsegnaDescrizione": "Testen aller Produktfunktionen und abschließende Übergabe an den Kunden (persönlich / per Fernzugriff)",
+
   },
   fr: {
     Bio: 'À propos de moi',
@@ -70,6 +97,14 @@ const translations = {
     "tramite progetti personali e per terzi": "dans le cadre de projets personnels et pour des tiers",
     "Dai un": "Jetez",
     "occhio ai miei progetti": "un coup d'œil à mes projets",
+    "Nuova richiesta": "Nouvelle demande",
+    "Richiesta di lavoro ricevuta": "Demande d'emploi reçue",
+    "Colloquio con il cliente": "Entretien avec le client",
+    "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto": "Analyse des exigences du produit par le biais d'un entretien en personne ou à distance",
+    "Sviluppo": "Développement",
+    "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Processus de développement de produits où le client peut voir l'état d'avancement des travaux à tout moment",
+    "Consegna": "Livraison",
+    "ConsegnaDescrizione": "Test de toutes les fonctionnalités du produit et enfin livraison au client (en personne / à distance)",
   }
 }
 
