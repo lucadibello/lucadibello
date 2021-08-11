@@ -12,10 +12,21 @@ import PoweredBy from './components/PoweredBy';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
 
+
+// Init smoothscroll polyfill
+import smoothscroll from 'smoothscroll-polyfill';
+
 import {
-  InfoRounded as QuestionIcon
 } from '@material-ui/icons'
 import CustomDrawer from './components/CustomDrawer';
+
+import {
+  InfoRounded as QuestionIcon,
+  MailOutlineOutlined as MailIcon,
+  EmojiPeople as PeopleIcon,
+  Work as WorkIcon,
+  AccountTree as ProjectIcon
+} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -87,15 +98,46 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+// Init smoothscroll polyfill
+smoothscroll.polyfill()
+
 function App() {
   const classes = useStyles()
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false)
+
+  /* Title refs */
+  const bioElemRef = React.createRef<HTMLDivElement>()
+  const workflowElemRef = React.createRef<HTMLDivElement>()
+  const projectsElemRef = React.createRef<HTMLDivElement>()
+  const servicesElemRef = React.createRef<HTMLDivElement>()
 
   return (
     <div className={classes.app}>
       { /* App Drawer */ }
       <CustomDrawer
         open={isDrawerOpen}
+        items={[
+          {
+            text: "Bio",
+            icon: PeopleIcon,
+            ref: bioElemRef
+          },
+          {
+            text: "WorkFlow",
+            icon: ProjectIcon,
+            ref: workflowElemRef
+          },
+          {
+            text: "Progetti",
+            icon: WorkIcon,
+            ref: projectsElemRef
+          },
+          {
+            text: "Servizi offerti",
+            icon: MailIcon,
+            ref: servicesElemRef
+          }
+        ]}
         onClose={() => setIsDrawerOpen(false)}
         onOpen={() => console.log("Open")}
       />
@@ -115,7 +157,7 @@ function App() {
         <img id="homepageBg" src="/assets/bg.jpg" alt="background" className={classes.homepageImg} draggable={false}/>
       </Box>
       
-      <Container className={classes.containerBio}>
+      <Container className={classes.containerBio} ref={bioElemRef}>
         <Bio />
       </Container>
 
@@ -124,7 +166,7 @@ function App() {
       </Box>
 
       <Box className={classes.containerWhite}>
-        <Container>
+        <Container ref={workflowElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
               Il mio WorkFlow 
@@ -146,7 +188,7 @@ function App() {
       </Box>
       
       <Box>
-        <Container className={classes.containerProjects}>
+        <Container className={classes.containerProjects} ref={projectsElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2White}>
               I miei ultimi progetti
@@ -163,7 +205,7 @@ function App() {
       </Box>
 
       <Box className={classes.containerWhite}>
-        <Container>
+        <Container ref={servicesElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
               Servizi
