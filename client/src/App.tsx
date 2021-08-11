@@ -133,7 +133,7 @@ function App() {
             ref: projectsElemRef
           },
           {
-            text: "Servizi offerti",
+            text: "Servizi & Skills",
             icon: MailIcon,
             ref: servicesElemRef
           }
@@ -208,7 +208,7 @@ function App() {
         <Container ref={servicesElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
-              Servizi
+              Servizi &amp; Skills
             </span>
           </Typography>
           <Services />
