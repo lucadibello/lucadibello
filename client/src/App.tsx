@@ -15,6 +15,7 @@ import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
 import {
   InfoRounded as QuestionIcon
 } from '@material-ui/icons'
+import CustomDrawer from './components/CustomDrawer';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -88,11 +89,21 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function App() {
   const classes = useStyles()
-  
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false)
+
   return (
     <div className={classes.app}>
+      { /* App Drawer */ }
+      <CustomDrawer
+        open={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        onOpen={() => console.log("Open")}
+      />
+
       { /* App navigator */ }
-      <Navigator />
+      <Navigator
+        onMenuToggle={() => setIsDrawerOpen(true)}
+      />
 
       { /* Text over image */ }
       <Paper elevation={3} className={classes.bgOverlay}>
