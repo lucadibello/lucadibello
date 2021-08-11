@@ -38,11 +38,10 @@ const useStyles = makeStyles(() =>
     }
   })
 );
-  
+
 export default function Bio () {
   // Use classes
   const classes = useStyles()
-
   const [highlited, setHightlited] = React.useState(false);
   
   // Return component
