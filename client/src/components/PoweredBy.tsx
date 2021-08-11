@@ -1,5 +1,4 @@
 import { Box, Typography } from '@material-ui/core'
-import { classes } from 'istanbul-lib-coverage';
 import React from 'react'
 import DockerLogo from './DockerLogo';
 import ReactLogo from './ReactLogo';
