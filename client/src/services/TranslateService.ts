@@ -7,7 +7,6 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .use(Backend)
   .init({
-    debug: true,
     nsSeparator: false,
     fallbackLng: "en", // use en if detected lng is not available
     interpolation: {
