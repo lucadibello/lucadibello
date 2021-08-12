@@ -16,7 +16,6 @@ import {
 
 import {
   Close as CloseIcon,
-  Delete as DeleteIcon,
   MarkunreadMailbox as MarkunreadMailboxIcon
 } from '@material-ui/icons'
 
