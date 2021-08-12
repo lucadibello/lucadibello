@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import '@fontsource/roboto'; 
 
 // Import i18n
-import './i18n'
+import './services/TranslateService'
 
 ReactDOM.render(
   <React.StrictMode>
