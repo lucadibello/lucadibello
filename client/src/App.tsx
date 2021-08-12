@@ -12,17 +12,16 @@ import Workflow from './components/Workflow';
 import BlackWave from './components/BlackWave';
 import Projects from './components/Projects';
 import Services from './components/Services';
-import PoweredBy from './components/PoweredBy';
 import CustomDrawer from './components/CustomDrawer';
+import MailModal from './components/MailModal';
 
 // Material-UI components
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Container, Paper, Typography, Box, Tooltip } from '@material-ui/core';
+import { Container, Paper, Typography, Box } from '@material-ui/core';
 
 // Material-UI Icons
 import {
-  InfoRounded as QuestionIcon,
-  MailOutlineOutlined as MailIcon,
+  RoomService as RoomServiceIcon,
   EmojiPeople as PeopleIcon,
   Work as WorkIcon,
   AccountTree as ProjectIcon
@@ -30,6 +29,7 @@ import {
 
 // Load smoothscroll polyfill
 import smoothscroll from 'smoothscroll-polyfill';
+import FooterCopyright from './components/FooterCopyright';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -89,15 +89,16 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: '10px',
     },
     spacer: {
-      marginBottom: '100vh'
-    },
-    containerPoweredBy: {
-      textAlign: 'center',
-      color: 'white'
+      marginBottom: '20vh'
     },
     imageContainer: {
       overflow: 'hidden'
     },
+    containerFooter: {
+      width: '100%',
+      textAlign: "center",
+      color: "white"
+    }
   })
 );
 
@@ -105,9 +106,15 @@ const useStyles = makeStyles((theme: Theme) =>
 smoothscroll.polyfill()
 
 function App() {
+  // Load translations
   const {t} = useTranslation()
+
+  // Load CSS classes
   const classes = useStyles()
+
+  // Create state variables
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false)
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
 
   /* Title refs */
   const bioElemRef = React.createRef<HTMLDivElement>()
@@ -138,7 +145,7 @@ function App() {
           },
           {
             text: t("drawer.Services"),
-            icon: MailIcon,
+            icon: RoomServiceIcon,
             ref: servicesElemRef
           }
         ]}
@@ -149,6 +156,13 @@ function App() {
       { /* App navigator */ }
       <Navigator
         onMenuToggle={() => setIsDrawerOpen(true)}
+        onModalToggle={() => setIsModalOpen(true)}
+      />
+
+      { /* Contact me modal */}
+      <MailModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
 
       { /* Text over image */ }
@@ -221,8 +235,8 @@ function App() {
       </Box>
 
       <Box>
-        <Container className={classes.containerPoweredBy}>
-          <PoweredBy />
+        <Container className={classes.containerFooter}>
+          <FooterCopyright />
         </Container>
       </Box>
 

@@ -31,5 +31,9 @@
   "LastUpdateAt":"Ultimo aggiornamento:",
   "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il":"Errore nella lettura dei miei progetti dal server. Puoi ancora vederli visitando il",
   "mio profilo github!":"mio profilo GitHub!",
-  "chiudi": "chiudi"
+  "chiudi": "chiudi",
+  "modalTitle": "Hai bisogno?",
+  "modalPhraseOne":"Necessiti un <1>sito web</1>? Un <3>applicazione</3> per <5>Android</5> o <7>iOS</7>?",
+  "modalPhraseContactMe":"Contattami semplicemente per E-Mail e discuteremo insieme la tua idea!",
+  "modalContactButton": "Contattami"
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 
 export default function Services () {
-
+  //eslint-disable-next-line
   const serviceCard = (): React.ReactElement => {
     return (
       <Box>
