@@ -24,6 +24,13 @@ const translations = {
     "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Product development process where the customer can see the status of the work at any time",
     "Consegna": "Delivery",
     "ConsegnaDescrizione": "Testing of all product features and lastly delivery to the customer in person or remotely",
+    "Vai al progetto": "View project",
+    "Vai al sito web": "Go to website",
+    "Carico i dati...": "Loading data....",
+    "Guarda tutti i progetti": "View all projects",
+    "LastUpdateAt": "Last update:",
+    "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il": "Error reading my projects from the server. You can still see them by",
+    "mio profilo github!": "visiting my GitHub profile!",
 
   },
   it: {
@@ -45,13 +52,20 @@ const translations = {
     "occhio ai miei progetti": "occhio ai miei progetti",
     "Nuova richiesta": "Nuova richiesta",
     "Richiesta di lavoro ricevuta": "Richiesta di lavoro ricevuta",
-    "Colloquio con il cliente": "Customer interview",
+    "Colloquio con il cliente": "Colloquio con il cliente",
     "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto": "Analisi dei requisiti del prodotto tramite un colloquio di persona o da remoto",
     "Sviluppo": "Sviluppo",
     "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro",
     "Consegna": "Consegna",
     "ConsegnaDescrizione": "Testing di tutte le funzionalità del prodotto ed infine la consegna al cliente (di persona / da remoto)",
-  
+    "Vai al progetto": "Vai al progetto",
+    "Vai al sito web": "Vai al sito web",
+    "Carico i dati...": "Carico i dati...",
+    "Guarda tutti i progetti": "Guarda tutti i progetti",
+    "LastUpdateAt": "Ultimo aggiornamento:",
+    "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il": "Errore nella lettura dei miei progetti dal server. Puoi ancora vederli visitando il",
+    "mio profilo github!": "mio profilo GitHub!",
+
   },
   de: {
     Bio: 'Über mich',
@@ -78,6 +92,13 @@ const translations = {
     "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Produktentwicklungsprozess, bei dem der Kunde jederzeit den Stand der Arbeit einsehen kann",
     "Consegna": "Lieferung",
     "ConsegnaDescrizione": "Testen aller Produktfunktionen und abschließende Übergabe an den Kunden (persönlich / per Fernzugriff)",
+    "Vai al progetto": "Siehe das Projekt",
+    "Vai al sito web": "Zur Website gehen",
+    "Carico i dati...": "Daten laden...",
+    "Guarda tutti i progetti": "Alle Projekte anzeigen",
+    "LastUpdateAt": "Letzte Aktualisierung:",
+    "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il": "Fehler beim Lesen meiner Projekte vom Server. Sie können sie immer noch sehen, indem Sie",
+    "mio profilo github!": "mein GitHub-Profil besuchen!",
 
   },
   fr: {
@@ -105,6 +126,14 @@ const translations = {
     "Processo di sviluppo del prodotto dove il cliente potrà in ogni momento vedere lo stato del lavoro": "Processus de développement de produits où le client peut voir l'état d'avancement des travaux à tout moment",
     "Consegna": "Livraison",
     "ConsegnaDescrizione": "Test de toutes les fonctionnalités du produit et enfin livraison au client (en personne / à distance)",
+    "Vai al progetto": "Voir le projet",
+    "Vai al sito web": "Aller sur le site web",
+    "Carico i dati...": "chargement des données...",
+    "Guarda tutti i progetti": "Voir tous les projets",
+    "LastUpdateAt": "Dernière mise à jour:",
+    "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il": "Erreur de lecture de mes projets depuis le serveur. Vous pouvez toujours les voir en visitant",
+    "mio profilo github!": "mon profil GitHub!",
+
   }
 }
 

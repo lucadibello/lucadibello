@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react'
 import GithubRepo from '../models/GithubRepo'
 import { getRepositories } from '../services/GithubService'
 import * as Cache from '../services/CacheService'
+import i18n from 'i18n-js'
 
 import {
   Grid,
@@ -149,7 +150,7 @@ export default function Projects () {
                 color="primary"
                 variant="contained"
               >
-                Vai al progetto
+                {i18n.t("Vai al progetto")}
               </Button>
               { repo.homepage !== "" && 
                 <Button 
@@ -159,7 +160,7 @@ export default function Projects () {
                   rel="noopener"
                   variant="contained"
                   color="secondary"
-                >Vai al sito web</Button>
+                >{i18n.t("Vai al sito web")}</Button>
               }
             </CardActions>
           </Card>
@@ -176,20 +177,20 @@ export default function Projects () {
 
   if (isLoading) {
     return (
-      <p>Carico i dati...</p>
+      <p>{i18n.t("Carico i dati...")}</p>
     );
   } else if (foundError) {
     return (
       <p>
-        Errore durante la lettura dei miei progetti dal server.
-        Puoi vederli comunque visitando il 
+        {i18n.t("Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il")}
+        
         <a 
           href="https://github.com/lucadibello"
           rel="noreferrer"
           title="Portfolio GitHub"
           target="_blank"
         >
-          mio profilo github!
+          {i18n.t("mio profilo github!")}
         </a>
       </p>
     )
@@ -198,7 +199,7 @@ export default function Projects () {
       <Box >
         {
           lastFetch !== null &&
-          <p>Ultimo aggiornamento: { new Date(lastFetch).toLocaleTimeString() }</p>
+          <p>{i18n.t("LastUpdateAt")} { new Date(lastFetch).toLocaleTimeString() }</p>
         }
         <Grid
           container
@@ -219,7 +220,7 @@ export default function Projects () {
               target="_blank"
               rel="noopener"
             >
-              Guarda tutti i progetti
+              {i18n.t("Guarda tutti i progetti")}
             </Button>
           </Container>
         }
