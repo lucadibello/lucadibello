@@ -57,18 +57,20 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Navigator (props: any) {
-  const {t, i18n} = useTranslation()
+interface NavigatorProps {
+  onMenuToggle: (event: React.MouseEvent<HTMLElement>) => void,
+  onModalToggle: (event: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+export default function Navigator (props: NavigatorProps) {
+  const {i18n} = useTranslation()
   const classes = useStyles();
 
   function setActive(prefix: string, activeClass: string): string {
-    console.log("Curr lang: ", i18n.language)
     if (i18n !== null && i18n !== undefined) {
       if (i18n.language !== undefined) {
         if (i18n.language.toLowerCase() === prefix.toLowerCase()) {
           return activeClass
-        } else {
-          return ""
         }
       }
     }
@@ -90,11 +92,15 @@ export default function Navigator (props: any) {
             role="presentation"
             component="span"
             onClick={props.onMenuToggle}
-            onKeyDown={props.onMenuToggle}
           >
             <MenuIcon />
           </IconButton>
-          <Fab color="secondary" aria-label="add" className={classes.fabButton}>
+          <Fab 
+            color="secondary" 
+            aria-label="add"
+            className={classes.fabButton}
+            onClick={props.onModalToggle}
+          >
             <MailIcon />
           </Fab>
           <div className={classes.grow} />
