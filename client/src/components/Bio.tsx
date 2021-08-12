@@ -1,17 +1,17 @@
 import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
-import i18n from 'i18n-js'
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() =>
   createStyles({
     smallerTitle: {
     },
     initialLetter: {
-      fontSize: '170px'
+      fontSize: '160px'
     },
     titleWelcome: {
-      fontSize: '90px'
+      fontSize: '80px'
     },
     bioBody: {
       padding: '20px'
@@ -41,6 +41,7 @@ const useStyles = makeStyles(() =>
 );
 
 export default function Bio () {
+  const {t} = useTranslation()
   // Use classes
   const classes = useStyles()
   const [highlited, setHightlited] = React.useState(false);
@@ -48,12 +49,12 @@ export default function Bio () {
   // Return component
   return (
     <Box>
-      <Typography variant="h1" component="h2" paragraph={true}>
-        <span className={classes.initialLetter}>{i18n.t("BioC")}</span><span className={classes.titleWelcome}>{i18n.t("BioIao")}!</span>
+      <Typography variant="h1" component="h3" paragraph={true}>
+        <span className={classes.initialLetter}>{t("BioC")}</span><span className={classes.titleWelcome}>{t("BioIao")}!</span>
       </Typography>
       <Box className={classes.bioBody}>
         <Typography variant="h4" component="h3" paragraph={true}>
-          {i18n.t("Mi chiamo")}&nbsp;
+          {t("Mi chiamo")}&nbsp;
           <span 
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
@@ -64,13 +65,13 @@ export default function Bio () {
         </Typography>
         
         <Typography variant="h5" component="p" paragraph={true}>
-          {i18n.t("BioFirstPhrase")}&nbsp;
+          {t("BioFirstPhrase")}&nbsp;
           <span
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            {i18n.t("Bachelor in Ingegeria Informatica alla SUPSI")}
+            {t("Bachelor in Ingegeria Informatica alla SUPSI")}
           </span>
         </Typography>
 
@@ -80,19 +81,19 @@ export default function Bio () {
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            {i18n.t("Molte delle mie conoscenze sono state apprese da autoditatta")}
+            {t("Molte delle mie conoscenze sono state apprese da autoditatta")}
           </span>
-          &nbsp;{i18n.t("tramite progetti personali e per terzi")}.
+          &nbsp;{t("tramite progetti personali e per terzi")}.
         </Typography>
 
         <Typography className={classes.endPhrase} variant="h5" component="p" paragraph={true}>
-          {i18n.t("Dai un")}&nbsp;
+          {t("Dai un")}&nbsp;
           <span
             className={classes.smallerTitle + " " + (highlited ? classes.highlited: classes.underlined)}
             onMouseEnter={() => setHightlited(true)}
             onMouseLeave={() => setHightlited(false)}
           >
-            {i18n.t("occhio ai miei progetti")}
+            {t("occhio ai miei progetti")}
           </span>
           &#33;
         </Typography>

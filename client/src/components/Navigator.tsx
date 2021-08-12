@@ -1,17 +1,17 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
   IconButton,
-  Fab
+  Fab,
+  Typography
 } from '@material-ui/core';
 
 import {
   Menu as MenuIcon,
-  Search as SearchIcon,
-  More as MoreIcon,
   MailOutlineOutlined as MailIcon
 } from '@material-ui/icons';
 
@@ -44,12 +44,40 @@ const useStyles = makeStyles((theme: Theme) =>
       left: 0,
       right: 0,
       margin: '0 auto'
+    },
+    spacer: 
+    {
+      marginLeft: "10px",
+      cursor: "pointer",
+      fontWeight: 600
+    },
+    active: {
+      color: "red"
     }
   }),
 );
 
 export default function Navigator (props: any) {
+  const {t, i18n} = useTranslation()
   const classes = useStyles();
+
+  function setActive(prefix: string, activeClass: string): string {
+    console.log("Curr lang: ", i18n.language)
+    if (i18n !== null && i18n !== undefined) {
+      if (i18n.language !== undefined) {
+        if (i18n.language.toLowerCase() === prefix.toLowerCase()) {
+          return activeClass
+        } else {
+          return ""
+        }
+      }
+    }
+    return ""
+  }
+
+  function setLang (locale: string): void {
+    i18n.changeLanguage(locale)
+  }
 
   return (
     <React.Fragment>  
@@ -70,12 +98,30 @@ export default function Navigator (props: any) {
             <MailIcon />
           </Fab>
           <div className={classes.grow} />
-          <IconButton color="inherit">
-            <SearchIcon />
-          </IconButton>
-          <IconButton edge="end" color="inherit">
-            <MoreIcon />
-          </IconButton>
+          <Typography 
+            className={classes.spacer + " " + (setActive("IT", classes.active))}
+            onClick={() => setLang("it")}
+          >
+            IT    
+          </Typography>
+          <Typography
+            className={classes.spacer + " " + (setActive("FR", classes.active))}
+            onClick={() => setLang("fr")}
+          >
+            FR    
+          </Typography>
+          <Typography
+            className={classes.spacer + " " + (setActive("DE", classes.active))}
+            onClick={() => setLang("de")}
+          >
+            DE    
+          </Typography>
+          <Typography
+            className={classes.spacer + " " + (setActive("EN", classes.active))}
+            onClick={() => setLang("en")}
+          >
+            EN    
+          </Typography>
         </Toolbar>
       </AppBar>
     </React.Fragment>

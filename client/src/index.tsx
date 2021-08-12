@@ -6,6 +6,9 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/roboto'; 
 
+// Import i18n
+import './i18n'
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

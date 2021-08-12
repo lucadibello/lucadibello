@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'  
 
 import {
   SwipeableDrawer,
@@ -64,6 +65,9 @@ const scrollToRef = (ref: React.MutableRefObject<HTMLDivElement>, close: Functio
 }
 
 export default function CustomDrawer (props: LucaDrawerProps) {
+  // Load i18n
+  const {t} = useTranslation()
+
   // Load classes
   const classes = useStyles()
 
@@ -80,7 +84,7 @@ export default function CustomDrawer (props: LucaDrawerProps) {
       >
         <div className={classes.drawerHeader}>
           <Typography variant="h5" component="h2">
-            Navigazione
+            {t("drawer.Title")}
           </Typography>
         </div>
         <Box>

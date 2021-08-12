@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import i18n from 'i18n-js'
+import i18n from '../i18n'
 
 import {
   Typography,

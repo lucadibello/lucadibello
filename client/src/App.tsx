@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Page styles
 import './App.css';
@@ -29,10 +30,6 @@ import {
 
 // Load smoothscroll polyfill
 import smoothscroll from 'smoothscroll-polyfill';
-
-// Load i18n + translations
-import i18n from 'i18n-js'
-import translations from './constants/Translations';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -107,16 +104,10 @@ const useStyles = makeStyles((theme: Theme) =>
 // Init smoothscroll polyfill
 smoothscroll.polyfill()
 
-// Init i18n
-i18n.translations = translations // set translations
-i18n.fallbacks = true // enable fallbacks if language not defined go to main
-
 function App() {
+  const {t} = useTranslation()
   const classes = useStyles()
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false)
-
-  // Set i18n language dinamically
-  i18n.locale = window.navigator.language // set local language pack
 
   /* Title refs */
   const bioElemRef = React.createRef<HTMLDivElement>()
@@ -131,22 +122,22 @@ function App() {
         open={isDrawerOpen}
         items={[
           {
-            text: i18n.t("Bio"),
+            text: t("drawer.Bio"),
             icon: PeopleIcon,
             ref: bioElemRef
           },
           {
-            text: i18n.t("WorkFlow"),
+            text: t("drawer.WorkFlow"),
             icon: ProjectIcon,
             ref: workflowElemRef
           },
           {
-            text: i18n.t("Progetti"),
+            text: t("drawer.Projects"),
             icon: WorkIcon,
             ref: projectsElemRef
           },
           {
-            text: i18n.t("Servizi & Skills"),
+            text: t("drawer.Services"),
             icon: MailIcon,
             ref: servicesElemRef
           }
@@ -182,12 +173,7 @@ function App() {
         <Container ref={workflowElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
-              {i18n.t("Il mio WorkFlow")}
-              <span className={classes.infoButton}>
-                <Tooltip title={i18n.t("Il mio processo di lavoro")} arrow placement="top">
-                  <QuestionIcon />
-                </Tooltip>
-              </span>
+              {t("Il mio WorkFlow")}
             </span>
           </Typography>
           <Workflow />
@@ -204,7 +190,7 @@ function App() {
         <Container className={classes.containerProjects} ref={projectsElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2White}>
-              {i18n.t("I miei ultimi progetti")}
+              {t("I miei ultimi progetti")}
             </span>
           </Typography>
           <Projects />
@@ -221,7 +207,7 @@ function App() {
         <Container ref={servicesElemRef}>
           <Typography variant="h3" component="h2">
             <span className={classes.title2}>
-              {i18n.t("Servizi & Skills")}
+              {t("drawer.Services")}
             </span>
           </Typography>
           <Services />
