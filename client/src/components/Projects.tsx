@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import GithubRepo from '../models/GithubRepo'
 import { getRepositories } from '../services/GithubService'
 import * as Cache from '../services/CacheService'
-import i18n from '../i18n'
+import i18n from '../services/TranslateService'
 
 import {
   Grid,
