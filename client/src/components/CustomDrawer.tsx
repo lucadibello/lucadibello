@@ -108,7 +108,7 @@ export default function CustomDrawer (props: LucaDrawerProps) {
           onClick={props.onClose}
           startIcon={<CloseIcon />}
         >
-          Chiudi
+          {t("chiudi")}
         </Button>
       </SwipeableDrawer>
     </nav>

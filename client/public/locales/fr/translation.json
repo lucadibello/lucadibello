@@ -30,5 +30,6 @@
   "Guarda tutti i progetti":"Voir tous les projets",
   "LastUpdateAt":"Dernière mise à jour:",
   "Errore durante la lettura dei miei progetti dal server. Puoi vederli comunque visitando il":"Erreur de lecture de mes projets depuis le serveur. Vous pouvez toujours les voir en visitant",
-  "mio profilo github!":"mon profil GitHub!"
+  "mio profilo github!":"mon profil GitHub!",
+  "chiudi": "fermer"
 }
