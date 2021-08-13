@@ -35,5 +35,18 @@
   "modalTitle": "Hai bisogno?",
   "modalPhraseOne":"Necessiti un <1>sito web</1>? Un <3>applicazione</3> per <5>Android</5> o <7>iOS</7>?",
   "modalPhraseContactMe":"Contattami semplicemente per E-Mail e discuteremo insieme la tua idea!",
-  "modalContactButton": "Contattami"
+  "modalContactButton": "Contattami",
+  "serviceSubtitleTech": "Tecnologie utilizzabili:",
+  "serviceSubtitleFeatures": "Informazioni aggiuntive",
+  "serviceWebTitle": "Sviluppo web",
+  "serviceWebDesc": "Sviluppo di pagine web utilizzabili su qualsiasi tipo di dispositivo tramite nuove tecnologie di sviluppo come <1>ReactJS</1> oppure <3>VueJS</3>",
+  "serviceWebFeatureOne": "Sito web pronto sin da subito per essere indicizzato nei principali motori di ricerca",
+  "serviceWebFeatureTwo": "Scelta dell'hosting più conveniente insieme al cliente",
+  "serviceWebFeatureThree": "Possibilità di PWA: siti web di ultima generazione che permettono di essere utilizzati offline",
+  "serviceAppTitle": "Sviluppo app",
+  "serviceAppDesc": "Sviluppo di applicazioni multipiattaforma native (quindi utilizzabili sia su dispositivi con Android che su dispositivi Apple) usando <1>React Native</1>", 
+  "serviceAppFeatureOne": "Applicazione subito utilizzabile sia da dispositivi con Android che dispositivi Apple (iOS e iPadOS)",
+  "serviceAppFeatureTwoTitle": "Veloce",
+  "serviceAppFeatureTwo": "Processo di sviluppo più veloce dal momento che il prodotto è sin da subito multipiattaforma, quindi senza la necessità di dover sviluppare due app separatamente",
+  "serviceAppFeatureThree": "Interfaccie grafiche semplici, moderne e chiare per offrire una migliore esperienza agli utenti"
 }

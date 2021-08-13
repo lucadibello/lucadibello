@@ -35,5 +35,18 @@
   "modalTitle": "Besoin d'aide ?",
   "modalPhraseOne": "Avez-vous besoin d'un <1>site web</1> ? Une <3>application</3> pour <5>Android</5> ou <7>iOS</7> ?",
   "modalPhraseContactMe": "Il suffit de me contacter par e-mail et nous discuterons ensemble de votre idée!",
-  "modalContactButton": "Contactez-moi"
+  "modalContactButton": "Contactez-moi",
+  "serviceWebTitle": "Développement web",
+  "serviceWebDesc": "Développement de pages web pouvant être utilisées sur tout type d'appareil à l'aide de nouvelles technologies de développement telles que <1>ReactJS</1> ou <3>VueJS</3>.",
+  "serviceSubtitleFeatures": "Informations complémentaires",
+  "serviceSubtitleTech": "Technologies pouvant être utilisées:",
+  "serviceWebFeatureOne": "Site web prêt à être indexé immédiatement dans les principaux moteurs de recherche",
+  "serviceWebFeatureTwo": "Choix de l'hébergement le plus rentable en collaboration avec le client",
+  "serviceWebFeatureThree": "Possibilité de PWA : sites web de pointe pouvant être utilisés hors ligne",
+  "serviceAppTitle": "Développement d'applications",
+  "serviceAppDesc": "Développement d'applications natives multiplateformes (c'est-à-dire utilisables sur les appareils Android et Apple) en utilisant <1>React Native</1>.", 
+  "serviceAppFeatureOne": "Application immédiatement utilisable par les appareils Android et Apple (iOS et iPadOS)",
+  "serviceAppFeatureTwoTitle": "Rapidité",
+  "serviceAppFeatureTwo": "Un processus de développement plus rapide puisque le produit est multiplateforme dès le départ, ce qui évite de devoir développer deux applications séparément.",
+  "serviceAppFeatureThree": "Des interfaces graphiques simples, modernes et claires pour une meilleure expérience utilisateur"
 }

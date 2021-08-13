@@ -30,6 +30,7 @@ import ReactLogo from './ReactLogo';
 import DockerLogo from './DockerLogo';
 import NuxtLogo from './NuxtLogo';
 import VueLogo from './VueLogo';
+import { Trans, useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -70,12 +71,21 @@ const useStyles = makeStyles(() =>
     icon: {
       height: "42px",
       width: "42px"
+    },
+    cardActions: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start"
+    },
+    grow: {
+      flexGrow: 1  
     }
   }),
 );
 
 export default function ServiceCardWeb (...props: any) {
   const classes = useStyles();
+  const {t} = useTranslation();
 
   return (
     <Card className={classes.root} {...props}>
@@ -85,7 +95,7 @@ export default function ServiceCardWeb (...props: any) {
             <LanguageIcon />
           </Avatar>
         }
-        title="Sviluppo Web"
+        title={t("serviceWebTitle").toString()}
         titleTypographyProps={{
           component: "h1",
           variant: "h5"
@@ -93,15 +103,17 @@ export default function ServiceCardWeb (...props: any) {
       />
       <CardContent>
         <Typography variant="body1" color="textSecondary" component="p">
-          Sviluppo di pagine web utilizzabili su qualsiasi tipo di dispositivo tramite
-          nuove tecnologie di sviluppo come&nbsp; 
-          <Link href="https://reactjs.org/" rel="noopener" target="_blank">ReactJS</Link>
-          &nbsp;oppure&nbsp;
-          <Link href="https://vuejs.org/" rel="noopener" target="_blank">VueJS</Link>
+          <Trans i18nKey="serviceWebDesc">
+            Sviluppo di pagine web utilizzabili su qualsiasi tipo di dispositivo tramite
+            nuove tecnologie di sviluppo come&nbsp; 
+            <Link href="https://reactjs.org/" rel="noopener" target="_blank">ReactJS</Link>
+            &nbsp;oppure&nbsp;
+            <Link href="https://vuejs.org/" rel="noopener" target="_blank">VueJS</Link>
+          </Trans>
         </Typography>
         <br />
         <Typography variant="body1" color="textPrimary" component="p">
-          Informazioni aggiuntive:
+          {t("serviceSubtitleFeatures")}
         </Typography>
         <List className={classes.services}>
           <ListItem>
@@ -110,7 +122,7 @@ export default function ServiceCardWeb (...props: any) {
                 <CheckIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="SEO-Ready" secondary="Sito web pronto sin da subito per essere indicizzato nei principali motori di ricerca" />
+            <ListItemText primary="SEO-Ready" secondary={t("serviceWebFeatureOne").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -118,7 +130,7 @@ export default function ServiceCardWeb (...props: any) {
                 <StorageIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Hosting" secondary="Scelta dell'hosting più conveniente insieme al cliente" />
+            <ListItemText primary="Hosting" secondary={t("serviceWebFeatureOne").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -126,11 +138,11 @@ export default function ServiceCardWeb (...props: any) {
                 <WifiOffIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="PWA" secondary="Possibilità di PWA: siti web di ultima generazione che permettono di essere utilizzati offline" />
+            <ListItemText primary="PWA" secondary={t("serviceWebFeatureThree").toString()} />
           </ListItem>
         </List>
         <Typography variant="body1" color="textPrimary" component="p">
-          Tecnologie utilizzabili:
+          {t("serviceSubtitleTech")}
         </Typography>
         <Box className={classes.iconContainer}>
           <Tooltip title="ReactJS">

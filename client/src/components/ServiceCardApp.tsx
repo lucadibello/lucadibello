@@ -26,6 +26,7 @@ import {
 } from '@material-ui/icons'
 
 import ReactLogo from './ReactLogo';
+import { Trans, useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -64,12 +65,18 @@ const useStyles = makeStyles(() =>
     icon: {
       height: "42px",
       width: "42px"
+    },
+    cardActions: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start"
     }
   }),
 );
 
 export default function ServiceCardApp (...props: any) {
-  const classes = useStyles();
+  const classes = useStyles()
+  const { t } = useTranslation()
 
   return (
     <Card className={classes.root} {...props}>
@@ -87,13 +94,15 @@ export default function ServiceCardApp (...props: any) {
       />
       <CardContent>
         <Typography variant="body1" color="textSecondary" component="p">
-          Sviluppo di applicazioni multipiattaforma native (quindi utilizzabili sia su dispositivi con Android che su dispositivi Apple)
-          usando&nbsp; 
-          <Link href="https://reactnative.dev/" rel="noopener" target="_blank">React Native</Link>
+          <Trans i18nKey="serviceAppDesc">
+            Sviluppo di applicazioni multipiattaforma native (quindi utilizzabili sia su dispositivi con Android che su dispositivi Apple)
+            usando&nbsp; 
+            <Link href="https://reactnative.dev/" rel="noopener" target="_blank">React Native</Link>
+          </Trans>
         </Typography>
         <br />
         <Typography variant="body1" color="textPrimary" component="p">
-          Informazioni aggiuntive:
+          {t("serviceSubtitleFeatures")}
         </Typography>
         <List className={classes.services}>
           <ListItem>
@@ -102,7 +111,7 @@ export default function ServiceCardApp (...props: any) {
                 <CallSplitIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Cross-Platform" secondary="Applicazione subito utilizzabile sia da dispositivi con Android che dispositivi Apple (iOS e iPadOS)" />
+            <ListItemText primary="Cross-Platform" secondary={t("serviceAppFeatureTwo").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -110,7 +119,7 @@ export default function ServiceCardApp (...props: any) {
                 <SpeedIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Velocità" secondary="Processo di sviluppo più veloce dato che il prodotto è sin da subito cross-platform" />
+            <ListItemText primary={t("serviceAppFeatureTwoTitle").toString()} secondary={t("serviceAppFeatureTwo").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -118,11 +127,11 @@ export default function ServiceCardApp (...props: any) {
                 <VerifiedUserIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="User-Friendly" secondary="Interfaccie grafiche semplici, moderne e chiare per offrire una migliore esperienza agli utenti" />
+            <ListItemText primary="User-Friendly" secondary={t("serviceAppFeatureThree").toString()} />
           </ListItem>
         </List>
         <Typography variant="body1" color="textPrimary" component="p">
-          Tecnologie utilizzate:
+          {t("serviceSubtitleTech")}
         </Typography>
         <Box className={classes.iconContainer}>
           <Tooltip title="React Native">
