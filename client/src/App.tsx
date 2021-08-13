@@ -40,8 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     containerBio: {
       textAlign: 'left',
-      color: 'white',
-      marginBottom: '5vh'
+      color: 'white'
     },
     containerWhite: {
       backgroundColor: 'white',
@@ -50,8 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: '20px'
     },
     containerProjects: {
-      color: 'white',
-      marginBottom: '10vh'
+      color: 'white'
     },
     bgOverlay: {
       position: 'absolute',
