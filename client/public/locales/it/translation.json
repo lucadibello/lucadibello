@@ -48,5 +48,13 @@
   "serviceAppFeatureOne": "Applicazione subito utilizzabile sia da dispositivi con Android che dispositivi Apple (iOS e iPadOS)",
   "serviceAppFeatureTwoTitle": "Veloce",
   "serviceAppFeatureTwo": "Processo di sviluppo più veloce dal momento che il prodotto è sin da subito multipiattaforma, quindi senza la necessità di dover sviluppare due app separatamente",
-  "serviceAppFeatureThree": "Interfaccie grafiche semplici, moderne e chiare per offrire una migliore esperienza agli utenti"
+  "serviceAppFeatureThree": "Interfaccie grafiche semplici, moderne e chiare per offrire una migliore esperienza agli utenti",
+  "serviceExtraTitle": "Servizi aggiuntivi",
+  "serviceExtraDesc": "Servizi aggiuntivi disponibili durante e dopo il processo di sviluppo o di consegna del prodotto", 
+  "serviceExtraFeatureOneTitle": "Web Server Personale",
+  "serviceExtraFeatureOne": "Configurazione e management di un server personale (privato) pronto per ospitare siti web in totale sicurezza. Generazione certificati SSL totalmente gratuita",
+  "serviceExtraFeatureTwoTitle": "Docker!",
+  "serviceExtraFeatureTwo": "Docker permette di impacchettare, spedire ed eseguire facilmente qualsiasi applicazione come un contenitore leggero, portatile e autosufficiente",
+  "serviceExtraFeatureThreeTitle": "Multi-Lingua",
+  "serviceExtraFeatureThree": "Supporto multi-lingua per il tuo sito web e la tua app!"
 }

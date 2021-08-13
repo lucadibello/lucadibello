@@ -48,5 +48,13 @@
   "serviceAppFeatureOne": "Application immediately usable by both devices with Android and Apple devices (iOS and iPadOS)",
   "serviceAppFeatureTwoTitle": "Fast",
   "serviceAppFeatureTwo": "Faster development process since the product is now cross-platform, therefore without the need to develop two apps separately",
-  "serviceAppFeatureThree": "Simple, modern and clear graphical interfaces to provide a better user experience"
+  "serviceAppFeatureThree": "Simple, modern and clear graphical interfaces to provide a better user experience",
+  "serviceExtraTitle": "Additional Services",
+  "serviceExtraDesc": "Additional services available during and after the product development or delivery process", 
+  "serviceExtraFeatureOneTitle": "Personal Web Server",
+  "serviceExtraFeatureOne": "Configuration and management of a personal server (private) ready to host websites in total security. Generation SSL certificates totally free",
+  "serviceExtraFeatureTwoTitle": "Docker!",
+  "serviceExtraFeatureTwo": "Docker allows you to easily pack, ship and run any application as a lightweight, portable and self-sufficient container",
+  "serviceExtraFeatureThreeTitle": "Multi-Language",
+  "serviceExtraFeatureThree": "Multi-language support for your website and app!"
 }

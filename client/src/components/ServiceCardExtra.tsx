@@ -17,8 +17,10 @@ import {
   VerifiedUser as VerifiedUserIcon,
   Dns as DnsIcon,
   Build as BuildIcon,
-  Add as AddIcon
+  Add as AddIcon,
+  GTranslate as TranslateIcon
 } from '@material-ui/icons'
+import { Trans, useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -53,7 +55,8 @@ const useStyles = makeStyles(() =>
 );
 
 export default function ServiceCardExtra (...props: any) {
-  const classes = useStyles();
+  const classes = useStyles()
+  const { t } = useTranslation()
 
   return (
     <Card className={classes.root} {...props}>
@@ -63,16 +66,18 @@ export default function ServiceCardExtra (...props: any) {
             <AddIcon />
           </Avatar>
         }
-        title="Servizi aggiuntivi"
+        title={t("serviceExtraTitle").toString()}
         titleTypographyProps={{
           component: "h1",
           variant: "h5"
         }}
       />
       <CardContent>
-        <Typography variant="body1" color="textSecondary" component="p">
-          Servizi aggiuntivi disponibili durante e dopo il processo di sviluppo o di consegna del prodotto &nbsp; 
-        </Typography>
+        <Trans i18nKey="serviceExtraDesc">
+          <Typography variant="body1" color="textSecondary" component="p">
+            Servizi aggiuntivi disponibili durante e dopo il processo di sviluppo o di consegna del prodotto &nbsp; 
+          </Typography>
+        </Trans>
         <br />
           <List className={classes.services}>
             <ListItem>
@@ -81,7 +86,7 @@ export default function ServiceCardExtra (...props: any) {
                   <DnsIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Web Server Personale" secondary='Configurazione e management di un server personale (privato) pronto per ospitare siti web in totale sicurezza. Generazione certificati SSL totalmente gratuita' />
+              <ListItemText primary={t("serviceExtraFeatureOneTitle")} secondary={t("serviceExtraFeatureOne")} />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
@@ -89,15 +94,15 @@ export default function ServiceCardExtra (...props: any) {
                   <BuildIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Docker!" secondary="Docker permette di impacchettare, spedire ed eseguire facilmente qualsiasi applicazione come un contenitore leggero, portatile e autosufficiente." />
+              <ListItemText primary={t("serviceExtraFeatureTwoTitle")} secondary={t("serviceExtraFeatureTwo")} />
             </ListItem>
             <ListItem>
               <ListItemAvatar>
                 <Avatar className={classes.pwaIcon}>
-                  <VerifiedUserIcon />
+                  <TranslateIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Multi-Lingua" secondary="Supporto multi-lingua per il tuo sito web e la tua app!" />
+              <ListItemText primary={t("serviceExtraFeatureThreeTitle")} secondary={t("serviceExtraFeatureThree")} />
             </ListItem>
           </List>
       </CardContent>

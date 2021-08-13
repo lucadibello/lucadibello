@@ -33,7 +33,8 @@ const useStyles = makeStyles(() =>
     },
     gridContainer: {
       margin: '0 !important',
-      padding: '20px'
+      padding: '20px',
+      alignItems: "flex-start"
     },
     fullWidth: {
       width: '100%'
