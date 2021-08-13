@@ -44,7 +44,7 @@
   "serviceWebFeatureTwo": "Choosing the most convenient hosting together with the customer",
   "serviceWebFeatureThree": "PWA capability: state-of-the-art websites that allow you to use them offline",
   "serviceAppTitle": "App development",
-  "serviceAppDesc": "Develop native cross-platform applications (i.e. usable on both Android and Apple devices) using <1>React Native</1>.", 
+  "serviceAppDesc": "Develop native cross-platform applications (i.e. usable on both Android and Apple devices) using <1>React Native</1>", 
   "serviceAppFeatureOne": "Application immediately usable by both devices with Android and Apple devices (iOS and iPadOS)",
   "serviceAppFeatureTwoTitle": "Fast",
   "serviceAppFeatureTwo": "Faster development process since the product is now cross-platform, therefore without the need to develop two apps separately",
