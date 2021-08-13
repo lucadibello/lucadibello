@@ -41,8 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     containerBio: {
       textAlign: 'left',
       color: 'white',
-      marginBottom: '5vh',
-      marginTop: '5vh'
+      marginBottom: '5vh'
     },
     containerWhite: {
       backgroundColor: 'white',

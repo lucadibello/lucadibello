@@ -108,7 +108,7 @@ export default function Navigator (props: NavigatorProps) {
             className={classes.spacer + " " + (setActive("IT", classes.active))}
             onClick={() => setLang("it")}
           >
-            IT    
+            IT
           </Typography>
           <Typography
             className={classes.spacer + " " + (setActive("FR", classes.active))}

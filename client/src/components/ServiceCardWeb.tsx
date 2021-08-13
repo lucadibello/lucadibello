@@ -3,11 +3,9 @@ import {
   Avatar,
   Box,
   Card,
-  CardActions,
   CardContent,
   CardHeader,
   createStyles,
-  IconButton,
   Link,
   List,
   ListItem,
@@ -19,8 +17,6 @@ import {
 } from '@material-ui/core';
 
 import {
-  Favorite as FavoriteIcon,
-  Share as ShareIcon,
   Language as LanguageIcon,
   Storage as StorageIcon,
   WifiOff as WifiOffIcon,
@@ -76,9 +72,6 @@ const useStyles = makeStyles(() =>
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start"
-    },
-    grow: {
-      flexGrow: 1  
     }
   }),
 );

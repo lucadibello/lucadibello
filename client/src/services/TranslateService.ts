@@ -8,6 +8,7 @@ i18n
   .use(Backend)
   .init({
     nsSeparator: false,
+    supportedLngs: ["en", "de", "fr", "it"],
     fallbackLng: "en", // use en if detected lng is not available
     interpolation: {
       escapeValue: false // react already safes from xss

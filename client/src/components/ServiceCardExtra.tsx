@@ -14,7 +14,6 @@ import {
 } from '@material-ui/core';
 
 import {
-  VerifiedUser as VerifiedUserIcon,
   Dns as DnsIcon,
   Build as BuildIcon,
   Add as AddIcon,
