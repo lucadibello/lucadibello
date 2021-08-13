@@ -49,7 +49,7 @@ export default function Bio () {
   // Return component
   return (
     <Box>
-      <Typography variant="h1" component="h3" paragraph={true}>
+      <Typography variant="h1" component="h2" paragraph={true}>
         <span className={classes.initialLetter}>{t("BioC")}</span><span className={classes.titleWelcome}>{t("BioIao")}!</span>
       </Typography>
       <Box className={classes.bioBody}>

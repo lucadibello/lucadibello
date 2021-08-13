@@ -11,7 +11,8 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Slide
+  Slide,
+  Typography
 } from '@material-ui/core'
 
 import {
@@ -63,14 +64,16 @@ export default function MailModal(props: MailModalProps) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            <Trans i18nKey="modalPhraseOne">
-              Necessiti un <b>sito web</b>? Un <b>applicazione</b> per <b>Android</b> o <b>iOS</b>?
-            </Trans>
-          </DialogContentText>
-          <DialogContentText id="alert-dialog-slide-description">
-            <Trans i18nKey="modalPhraseContactMe">
-              Contattami semplicemente per E-Mail e discuteremo insieme la tua idea! 
-            </Trans>
+            <Typography paragraph={true}>
+              <Trans i18nKey="modalPhraseOne">
+                Necessiti un <b>sito web</b>? Un <b>applicazione</b> per <b>Android</b> o <b>iOS</b>?
+              </Trans>
+            </Typography>
+            <Typography>
+              <Trans i18nKey="modalPhraseContactMe">
+                Contattami semplicemente per E-Mail e discuteremo insieme la tua idea! 
+              </Trans>
+            </Typography>
           </DialogContentText>
           <Button
             variant="contained"

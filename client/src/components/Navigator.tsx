@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 600
     },
     active: {
-      color: "red"
+      color: "#9e0059"
     }
   }),
 );

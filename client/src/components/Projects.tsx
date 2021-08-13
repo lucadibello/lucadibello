@@ -44,6 +44,10 @@ const useStyles = makeStyles(() =>
     },
     showMoreContainer: {
       color: 'white'
+    },
+    gotoWebsite: {
+      color: 'white',
+      backgroundColor: "#D90429"
     }
   })
 )
@@ -161,6 +165,7 @@ export default function Projects () {
                   rel="noopener"
                   variant="contained"
                   color="secondary"
+                  className={classes.gotoWebsite}
                 >{i18n.t("Vai al sito web")}</Button>
               }
             </CardActions>

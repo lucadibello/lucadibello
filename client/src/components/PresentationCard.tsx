@@ -45,7 +45,7 @@ export default function PresentationCard () {
       <br />
       <Box className={classes.socialIcons}>
         <Typography display="inline">
-          <Link href="https://github.com/lucadibello" target="_blank">
+          <Link href="https://github.com/lucadibello" target="_blank" title="Luca Di Bello - GitHub" rel="noopener">
             <Tooltip title="GitHub" arrow>
               <GitHubIcon className={classes.spaceAround}/>
             </Tooltip>
@@ -53,7 +53,7 @@ export default function PresentationCard () {
         </Typography>
 
         <Typography display="inline">
-          <Link href="https://www.instagram.com/lucaa_dibello/" target="_blank">
+          <Link href="https://www.instagram.com/lucaa_dibello/" target="_blank" title="Luca Di Bello - Instagram" rel="noopener">
             <Tooltip title="Instagram" arrow>
               <InstagramIcon className={classes.spaceAround}/>
             </Tooltip>
@@ -61,7 +61,7 @@ export default function PresentationCard () {
         </Typography>
 
         <Typography display="inline">
-          <Link href="mailto:info@lucadibello.ch" target="_blank">
+          <Link href="mailto:info@lucadibello.ch" target="_blank" title="Luca Di Bello - Mail">
             <Tooltip title="Email" arrow>
               <EmailIcon className={classes.spaceAround}/>
             </Tooltip>
