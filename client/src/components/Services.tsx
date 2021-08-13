@@ -1,43 +1,47 @@
-import { Box } from '@material-ui/core'
 import React from 'react'
+import ServiceCardWeb from './ServiceCardWeb'
+import { createStyles, makeStyles,  } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
+import ServiceCardApp from './ServiceCardApp';
+import ServiceCardExtra from './ServiceCardExtra';
 
-
+const useStyles = makeStyles(() =>
+  createStyles({
+    serviceCard: {
+      margin: "10px"
+    },
+    servicesWrapper: {
+      marginTop: "3vh",
+      display: "flex",
+      flexDirection: "row",
+      justifyItems: "center",
+      justifyContent: "space-evenly",
+      padding: "10px",
+      flexWrap: "wrap"
+    },
+    bottom: {
+      display: "flex",
+      justifyContent: "center",
+      padding: "30px"
+    }
+  })
+)
 export default function Services () {
-  //eslint-disable-next-line
-  const serviceCard = (): React.ReactElement => {
-    return (
-      <Box>
-        Test
-      </Box>
-    )
-  }
+  const classes = useStyles()
 
   return (
-    <Box>
-      <p>
-        Sviluppo applicazioni iOS &amp; Android
-          - Applicazioni multipiattaforma
-          - React Native
-      </p>
-      <p>
-        Sviluppo siti web
-          - Hosting online: scelta del miglior hosting tenendo conto del rapporto tra le prestazioni richieste dal sito ed il prezzo dei vari servizi di hosting
-          - SEO-Ready: pronto per essere indicizzato nei principali motori di ricerca
-          - PWA: Siti web di nuova generazione
-          - React / Vue / PHP / Python+Flask (MOSTRARE ICONE + POPOVER)
-      </p>
-      <p>
-        Sviluppo applicazioni Desktop
-          - Applicazioni multipiattaforma (Windows, Linux, MacOS)
-          - Java / C# (MOSTRARE ICONE + POPOVER)
-      </p>
-      <p>
-        Extra
-          - Sviluppo macro pacchetto Office
-          - Creazione WebServer (Linux &amp; Windows)
-          - Creazione rete aziendale tramite Windows Server
-          - Assemblaggio
-      </p>
-    </Box>
+    <React.Fragment>
+      <Box id="servicesAppWebContainer" className={classes.servicesWrapper}>
+        <Box className={classes.serviceCard}>
+          <ServiceCardWeb />
+        </Box>
+        <Box className={classes.serviceCard}>
+          <ServiceCardApp />
+        </Box>
+      </Box>
+      <Box className={classes.bottom}>
+        <ServiceCardExtra />
+      </Box>
+    </React.Fragment>
   )
 }
