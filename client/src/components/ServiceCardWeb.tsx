@@ -123,7 +123,7 @@ export default function ServiceCardWeb (...props: any) {
                 <StorageIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Hosting" secondary={t("serviceWebFeatureOne").toString()} />
+            <ListItemText primary="Hosting" secondary={t("serviceWebFeatureTwo").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>

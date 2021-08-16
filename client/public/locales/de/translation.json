@@ -41,13 +41,13 @@
   "serviceSubtitleFeatures": "Zusätzliche Informationen",
   "serviceSubtitleTech": "Technologien, die eingesetzt werden können:",
   "serviceWebFeatureOne": "Die Website kann sofort in die wichtigsten Suchmaschinen aufgenommen werden",
-  "serviceWebFeatureTwo": "Gemeinsam mit dem Kunden das kostengünstigste Hosting auswählen",
+  "serviceWebFeatureTwo": "Auswahl des kosteneffizientesten Hostings je nach Kundenbedarf",
   "serviceWebFeatureThree": "Möglichkeit von PWA: moderne Websites, die offline genutzt werden können",
   "serviceAppTitle": "App-Entwicklung",
   "serviceAppDesc": "Entwickeln Sie native, plattformübergreifende Anwendungen (d.h. nutzbar auf Android- und Apple-Geräten) mit <1>React Native</1>", 
   "serviceAppFeatureOne": "Anwendung sofort nutzbar durch beide Geräte mit Android und Apple-Geräte (iOS und iPadOS)",
   "serviceAppFeatureTwoTitle": "Schnell",
-  "serviceAppFeatureTwo": "Schnellerer Entwicklungsprozess, da das Produkt nun plattformübergreifend ist und somit nicht mehr zwei Anwendungen separat entwickelt werden müssen",
+  "serviceAppFeatureTwo": "Schneller Entwicklungsprozess: Das Produkt ist von Anfang an plattformübergreifend, ohne dass zwei separate Anwendungen entwickelt werden müssen",
   "serviceAppFeatureThree": "Einfache, moderne und übersichtliche grafische Oberflächen für eine bessere Benutzererfahrung",
   "serviceExtraTitle": "Zusätzliche Dienstleistungen",
   "serviceExtraDesc": "Zusätzliche Dienstleistungen während und nach dem Produktentwicklungs- oder Lieferprozess", 
@@ -56,5 +56,5 @@
   "serviceExtraFeatureTwoTitle": "Docker!",
   "serviceExtraFeatureTwo": "Mit Docker können Sie jede Anwendung als leichtgewichtigen, portablen und autarken Container verpacken, versenden und ausführen",
   "serviceExtraFeatureThreeTitle": "Mehrsprachig",
-  "serviceExtraFeatureThree": "Mehrsprachige Unterstützung für Ihre Website und App!"
+  "serviceExtraFeatureThree": "Mehrsprachige Unterstützung für Ihre Website und App"
 }

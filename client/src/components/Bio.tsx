@@ -83,7 +83,7 @@ export default function Bio () {
           >
             {t("Molte delle mie conoscenze sono state apprese da autoditatta")}
           </span>
-          &nbsp;{t("tramite progetti personali e per terzi")}.
+          &nbsp;{t("tramite progetti personali e per terzi")}
         </Typography>
 
         <Typography className={classes.endPhrase} variant="h5" component="p" paragraph={true}>

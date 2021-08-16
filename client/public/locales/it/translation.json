@@ -41,13 +41,13 @@
   "serviceWebTitle": "Sviluppo web",
   "serviceWebDesc": "Sviluppo di pagine web utilizzabili su qualsiasi tipo di dispositivo tramite nuove tecnologie di sviluppo come <1>ReactJS</1> oppure <3>VueJS</3>",
   "serviceWebFeatureOne": "Sito web pronto sin da subito per essere indicizzato nei principali motori di ricerca",
-  "serviceWebFeatureTwo": "Scelta dell'hosting più conveniente insieme al cliente",
+  "serviceWebFeatureTwo": "Scelta dell'hosting più conveniente in base alle necessità del cliente",
   "serviceWebFeatureThree": "Possibilità di PWA: siti web di ultima generazione che permettono di essere utilizzati offline",
   "serviceAppTitle": "Sviluppo app",
   "serviceAppDesc": "Sviluppo di applicazioni multipiattaforma native (quindi utilizzabili sia su dispositivi con Android che su dispositivi Apple) usando <1>React Native</1>", 
   "serviceAppFeatureOne": "Applicazione subito utilizzabile sia da dispositivi con Android che dispositivi Apple (iOS e iPadOS)",
   "serviceAppFeatureTwoTitle": "Veloce",
-  "serviceAppFeatureTwo": "Processo di sviluppo più veloce dal momento che il prodotto è sin da subito multipiattaforma, quindi senza la necessità di dover sviluppare due app separatamente",
+  "serviceAppFeatureTwo": "Processo di sviluppo rapido: il prodotto è sin da subito multipiattaforma, senza la necessità di sviluppare due app separate",
   "serviceAppFeatureThree": "Interfaccie grafiche semplici, moderne e chiare per offrire una migliore esperienza agli utenti",
   "serviceExtraTitle": "Servizi aggiuntivi",
   "serviceExtraDesc": "Servizi aggiuntivi disponibili durante e dopo il processo di sviluppo o di consegna del prodotto", 
@@ -56,5 +56,5 @@
   "serviceExtraFeatureTwoTitle": "Docker!",
   "serviceExtraFeatureTwo": "Docker permette di impacchettare, spedire ed eseguire facilmente qualsiasi applicazione come un contenitore leggero, portatile e autosufficiente",
   "serviceExtraFeatureThreeTitle": "Multi-Lingua",
-  "serviceExtraFeatureThree": "Supporto multi-lingua per il tuo sito web e la tua app!"
+  "serviceExtraFeatureThree": "Supporto multi-lingua per il tuo sito web e la tua app"
 }

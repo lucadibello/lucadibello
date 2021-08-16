@@ -84,7 +84,7 @@ export default function ServiceCardApp (...props: any) {
             <PhoneIcon />
           </Avatar>
         }
-        title="Sviluppo App"
+        title={t("serviceAppTitle").toString()}
         titleTypographyProps={{
           component: "h1",
           variant: "h5"
@@ -109,7 +109,7 @@ export default function ServiceCardApp (...props: any) {
                 <CallSplitIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Cross-Platform" secondary={t("serviceAppFeatureTwo").toString()} />
+            <ListItemText primary="Cross-Platform" secondary={t("serviceAppFeatureOne").toString()} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>

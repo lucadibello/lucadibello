@@ -41,13 +41,13 @@
   "serviceSubtitleFeatures": "Additional Information",
   "serviceSubtitleTech": "Usable technologies:",
   "serviceWebFeatureOne": "Website ready immediately to be indexed in major search engines",
-  "serviceWebFeatureTwo": "Choosing the most convenient hosting together with the customer",
+  "serviceWebFeatureTwo": "Choice of the most convenient hosting according to the customer's needs",
   "serviceWebFeatureThree": "PWA capability: state-of-the-art websites that allow you to use them offline",
   "serviceAppTitle": "App development",
   "serviceAppDesc": "Develop native cross-platform applications (i.e. usable on both Android and Apple devices) using <1>React Native</1>", 
   "serviceAppFeatureOne": "Application immediately usable by both devices with Android and Apple devices (iOS and iPadOS)",
   "serviceAppFeatureTwoTitle": "Fast",
-  "serviceAppFeatureTwo": "Faster development process since the product is now cross-platform, therefore without the need to develop two apps separately",
+  "serviceAppFeatureTwo": "Rapid development process: the product is cross-platform right out of the box, without the need to develop two separate apps",
   "serviceAppFeatureThree": "Simple, modern and clear graphical interfaces to provide a better user experience",
   "serviceExtraTitle": "Additional Services",
   "serviceExtraDesc": "Additional services available during and after the product development or delivery process", 
@@ -56,5 +56,5 @@
   "serviceExtraFeatureTwoTitle": "Docker!",
   "serviceExtraFeatureTwo": "Docker allows you to easily pack, ship and run any application as a lightweight, portable and self-sufficient container",
   "serviceExtraFeatureThreeTitle": "Multi-Language",
-  "serviceExtraFeatureThree": "Multi-language support for your website and app!"
+  "serviceExtraFeatureThree": "Multi-language support for your website and app"
 }

@@ -16,7 +16,7 @@ import {
   Container
 } from '@material-ui/core'
 import { GITHUB_CACHE_KEY } from '../constants/Cache'
-import { GITHUB_PERSONAL_PROFILE, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE } from '../constants/Github'
+import { GITHUB_PERSONAL_PROFILE, GITHUB_PROJECTS_SHOWN_IN_HOMEPAGE, PUBLIC_WEBSITE_URL } from '../constants/Github'
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() =>
@@ -157,7 +157,7 @@ export default function Projects () {
               >
                 {i18n.t("Vai al progetto")}
               </Button>
-              { repo.homepage !== "" && 
+              { repo.homepage !== null && repo.homepage.length !== 0 && repo.homepage !== PUBLIC_WEBSITE_URL &&
                 <Button 
                   size="small"
                   href={repo.homepage}
