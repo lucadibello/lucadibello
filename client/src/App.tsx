@@ -1,19 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import loadable from '@loadable/component'
 
 // Page styles
 import './App.css';
-
-// Personal components
-import Navigator from './components/Navigator'
-import PresentationCard from './components/PresentationCard';
-import Bio from './components/Bio';
-import Workflow from './components/Workflow';
-import BlackWave from './components/BlackWave';
-import Projects from './components/Projects';
-import Services from './components/Services';
-import CustomDrawer from './components/CustomDrawer';
-import MailModal from './components/MailModal';
 
 // Material-UI components
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -30,6 +20,26 @@ import {
 // Load smoothscroll polyfill
 import smoothscroll from 'smoothscroll-polyfill';
 import FooterCopyright from './components/FooterCopyright';
+
+// Personal components
+//import Navigator from './components/Navigator'
+//import PresentationCard from './components/PresentationCard';
+//import Bio from './components/Bio';
+//import Workflow from './components/Workflow';
+//import BlackWave from './components/BlackWave';
+// import Projects from './components/Projects';
+// import Services from '';
+// import CustomDrawer from './components/CustomDrawer';
+// import MailModal from './components/MailModal';
+const Navigator = loadable(() => import('./components/Navigator'))
+const PresentationCard = loadable(() => import('./components/PresentationCard'))
+const Bio = loadable(() => import('./components/Bio'))
+const Workflow = loadable(() => import('./components/Workflow'))
+const BlackWave = loadable(() => import('./components/BlackWave'))
+const Services = loadable(() => import('./components/Services'))
+const Projects = loadable(() => import('./components/Projects'))
+const CustomDrawer = loadable(() => import('./components/CustomDrawer'))
+const MailModal = loadable(() => import('./components/MailModal'))
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
