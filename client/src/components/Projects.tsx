@@ -135,7 +135,7 @@ export default function Projects () {
           <Card variant="outlined">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
-                <Link href={repo.html_url} target="_blank" className={classes.repoTitle}>
+                <Link href={repo.html_url} target="_blank" rel="noopener" className={classes.repoTitle}>
                   {repo.name}
                 </Link>
               </Typography>
