@@ -22,15 +22,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 import FooterCopyright from './components/FooterCopyright';
 
 // Personal components
-//import Navigator from './components/Navigator'
-//import PresentationCard from './components/PresentationCard';
-//import Bio from './components/Bio';
-//import Workflow from './components/Workflow';
-//import BlackWave from './components/BlackWave';
-// import Projects from './components/Projects';
-// import Services from '';
-// import CustomDrawer from './components/CustomDrawer';
-// import MailModal from './components/MailModal';
 const Navigator = loadable(() => import('./components/Navigator'))
 const PresentationCard = loadable(() => import('./components/PresentationCard'))
 const Bio = loadable(() => import('./components/Bio'))
