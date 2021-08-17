@@ -22,11 +22,12 @@ import {
   WifiOff as WifiOffIcon,
   Check as CheckIcon
 } from '@material-ui/icons'
+import { Trans, useTranslation } from 'react-i18next';
+
 import ReactLogo from './ReactLogo';
 import DockerLogo from './DockerLogo';
 import NuxtLogo from './NuxtLogo';
 import VueLogo from './VueLogo';
-import { Trans, useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() =>
   createStyles({

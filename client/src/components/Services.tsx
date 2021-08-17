@@ -1,9 +1,11 @@
 import React from 'react'
-import ServiceCardWeb from './ServiceCardWeb'
+import loadable from '@loadable/component'
 import { createStyles, makeStyles,  } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-import ServiceCardApp from './ServiceCardApp';
-import ServiceCardExtra from './ServiceCardExtra';
+
+const ServiceCardWeb = loadable(() => import('./ServiceCardWeb'))
+const ServiceCardApp = loadable(() => import('./ServiceCardApp'))
+const ServiceCardExtra = loadable(() => import('./ServiceCardExtra'))
 
 const useStyles = makeStyles(() =>
   createStyles({
