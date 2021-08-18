@@ -11,7 +11,8 @@ import {
 import {
   GitHub as GitHubIcon,
   Instagram as InstagramIcon,
-  EmailSharp as EmailIcon
+  EmailSharp as EmailIcon,
+  LinkedIn as LinkedinIcon
 } from '@material-ui/icons'
 
 
@@ -56,6 +57,14 @@ export default function PresentationCard () {
           <Link href="https://www.instagram.com/lucaa_dibello/" target="_blank" title="Luca Di Bello - Instagram" rel="noopener">
             <Tooltip title="Instagram" arrow>
               <InstagramIcon className={classes.spaceAround}/>
+            </Tooltip>
+          </Link>
+        </Typography>
+
+        <Typography display="inline">
+          <Link href="https://www.linkedin.com/in/luca-di-bello/" target="_blank" title="Luca Di Bello - LinkedIn" rel="noopener">
+            <Tooltip title="LinkedIn" arrow>
+              <LinkedinIcon className={classes.spaceAround}/>
             </Tooltip>
           </Link>
         </Typography>
