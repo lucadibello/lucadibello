@@ -1,17 +1,8 @@
 import { Stage, OrbitControls, useGLTF } from "@react-three/drei"
-import { useFrame } from "@react-three/fiber"
-import { Suspense, useRef } from "react"
+import { Suspense } from "react"
 
 const FloatingModel = () => {
-  const floatingModelRef = useRef<any>()
   const { scene } = useGLTF("/isometric_bedroom/scene.gltf")
-
-  useFrame(() => {
-    if (floatingModelRef.current) {
-      floatingModelRef.current.rotation.x += 0.01
-      floatingModelRef.current.rotation.y += 0.01
-    }
-  })
 
   return (
     <Suspense>
