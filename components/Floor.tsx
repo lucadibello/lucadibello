@@ -1,10 +1,15 @@
+import { Plane } from "@react-three/drei"
+
 const Floor = () => (
-  <mesh
-    receiveShadow
-    rotation={[-Math.PI / 2, 0, 0]}
-    position={[0, -1, 0]}
-  >
-    <meshStandardMaterial attach="material" />
+  <mesh receiveShadow>
+    <Plane
+      position={[0, .5, 0]}
+      rotation={[-Math.PI / 2, 0, 0]}
+      scale={[1000, 1000, 1000]}
+      receiveShadow
+    >
+      <meshBasicMaterial color="red" />
+    </Plane>
   </mesh>
 )
 

@@ -1,23 +1,14 @@
-import { Stage, OrbitControls, useGLTF } from "@react-three/drei"
+import { useGLTF } from "@react-three/drei"
 
 const FloatingModel = () => {
   const { scene } = useGLTF("/isometric_bedroom/scene.gltf")
 
   return (
     <>
-      <Stage castShadow position={[10,10,0]}> 
+      <group castShadow receiveShadow position={[0, 0, 0]}> 
         <primitive object={scene} />
-      </Stage>
-      <OrbitControls
-        autoRotate
-        enableZoom={true}
-        enablePan={false}
-        enableDamping={true}
-        dampingFactor={0.1}
-        rotateSpeed={0.6}
-        minZoom={1}
-        maxZoom={1}
-      />
+      </group>
+      
     </>
   )
 }
