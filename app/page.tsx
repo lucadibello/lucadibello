@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Header from "@/components/header";
 import { getRepos } from "@/services/github/github-service";
@@ -7,19 +7,27 @@ import { palette } from "@/util/theme";
 import { Box, HStack, Heading, Stack } from "@chakra-ui/layout";
 import { Code, Text, Image, IconButton, Button } from "@chakra-ui/react";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default async function Home() {
-  const ip = await getIpAddresses().then(r => r.ip).catch(() => {
-    console.warn("Unable to get your public IP address");
-    return null
-  });
 
-  const repos = await getRepos().then(r => r).catch(() => {
-    console.warn("Unable to fetch your GitHub repos");
-    return null
-  });
+  // States for IP and repos
+  const [ip, setIp] = useState<string | null>(null);
+  const [repos, setRepos] = useState<any | null>(null);
+
+  // Fetch IP and repos
+  useEffect(() => {
+    getIpAddresses().then(r => setIp(r.ip)).catch(() => {
+      console.warn("Unable to get your public IP address");
+      setIp(null);
+    });
+
+    getRepos().then(r => setRepos(r)).catch(() => {
+      console.warn("Unable to fetch your GitHub repos");
+      setRepos(null);
+    });
+  }, []);
 
   return (
     <main>
