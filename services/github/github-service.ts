@@ -1,11 +1,11 @@
-import { GithubUserReposApiResponse } from "./service"
+import { GithubRepository, GithubUserReposApiResponse } from "./service"
 
-export async function getRepos(): Promise<GithubUserReposApiResponse> {
+export async function getRepos(): Promise<GithubRepository[]> {
   if (!process.env.NEXT_PUBLIC_GITHUB_API) {
     throw new Error("Missing GITHUB_API env variable")
   }
 
-  return fetch(process.env.NEXT_PUBLIC_GITHUB_API).then((response) =>
-    response.json()
-  )
+  const response = await fetch(process.env.NEXT_PUBLIC_GITHUB_API)
+  const data = await response.json()
+  return data
 }

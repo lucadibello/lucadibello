@@ -1,3 +1,0 @@
-- IP address of the visitor
-- Section where all my projects are listed (LinkedIn API)
-- Section where all my repositories are listed

@@ -1,33 +1,35 @@
-import { Box, Code, Heading, Text } from "@chakra-ui/layout";
-import Image from "next/image";
-import { useMemo } from "react";
+import { Box, Heading, Text, Code, HStack } from "@chakra-ui/layout";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import Link from "next/link";
+import { IconButton } from "@chakra-ui/react";
+import { palette } from "@/theme";
 
-interface HeaderProps {
-  ip: string | null
-}
 
-export default function Header({ ip }: HeaderProps) {
-
-  const header = useMemo(() => {
-    if (ip) {
-      return (
-        <Heading as="h1" size="lg">
-          Welcome <Code fontSize={"xl"}>{ip}</Code> 👋!
-        </Heading>
-      )
-    } else {
-      return (
-        <Heading as="h1" size="lg">
-          Welcome to my website!
-        </Heading>
-      )
-    }
-  }, [ip])
-
+export default function Header() {
   return (
     <header>
-      <Box w="full">
-        {header}
+      <Box as="section" pb="10" pt={"200px"} px="5" w="full" backgroundColor={palette.mint_cream}>
+        <Heading as="h1" size="lg">
+          Hello there, I&apos;m Luca Di Bello 👋
+        </Heading>
+
+        <Text fontSize="xl" fontWeight="bold" mt="5">
+          a <Code fontSize={"lg"} bgColor={palette.mint_green}>Software Engineer</Code> based in <Code fontSize={"lg"} bgColor={palette.mint_green}>Switzerland</Code> 🇨🇭.
+        </Text>
+
+        {/* Box with social links */}
+        <HStack mt={5}>
+          <Link href={process.env.NEXT_PUBLIC_GITHUB_URL!} target="_blank" rel="noopener noreferrer">
+            <IconButton aria-label="blackAlpha" icon={<FiGithub />} bgColor={palette.mint_green} />
+          </Link>
+          <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL!} target="_blank" rel="noopener noreferrer">
+            <IconButton aria-label="LinkedIn" icon={<FiLinkedin />} bgColor={palette.mint_green} />
+          </Link>
+          <Link href={"mailto:" + process.env.NEXT_PUBLIC_MAIL_ADDRESS!} target="_blank" rel="noopener noreferrer">
+            <IconButton aria-label="Email" icon={<FiMail />} bgColor={palette.mint_green} />
+          </Link>
+        </HStack>
+
       </Box>
     </header>
   )
