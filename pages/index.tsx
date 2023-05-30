@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import { palette } from "@/lib/theme";
 import { Box, Heading, Stack } from "@chakra-ui/layout";
-import { Text, Image, Skeleton, Button, Code } from "@chakra-ui/react";
+import { Text, Skeleton, Button, Code } from "@chakra-ui/react";
 import { getRepos } from "@/services/github/github-service";
 import { useEffect, useState } from "react";
 import { GithubRepository } from "@/services/github/service";
@@ -9,6 +9,7 @@ import RepositoryList from "@/components/repositoriy-list";
 import Head from "next/head";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { Link } from "@chakra-ui/next-js";
+import Image from "next/image";
 
 export default function Home() {
   // States
@@ -39,14 +40,30 @@ export default function Home() {
         <meta name="description" content="Luca Di Bello personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="192x192" href="/favicons/maskable/logo192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+        <link rel="mask-icon" href="/favicons/apple/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#cce3de" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <main>
 
         {/* Pass IP to Header component */}
         <Header />
 
-        {/* divider */}
-        <Image src="/images/steps.svg" alt="steps" width={"full"} />
+        {/* Next/image NextJS 13.4 full width */}
+        <Box position={"relative"} w={"100%"} h={"200px"}>
+          {/* divider */}
+          <Image
+            src="/images/steps.svg"
+            alt="steps"
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </Box>
 
         {/* second section - who am i*/}
         <Box as="section" py="10" px="5" backgroundColor={palette.viridian}>
@@ -68,7 +85,16 @@ export default function Home() {
         </Box>
 
         {/* divider */}
-        <Image src="/images/steps-inv.svg" alt="steps" width={"full"} />
+        <Box position={"relative"} w={"100%"} h={"200px"}>
+          <Image
+            src="/images/steps-inv.svg"
+            alt="divider image"
+            fill
+            sizes="100vw"
+            loading="eager"
+            style={{ objectFit: "cover" }}
+          />
+        </Box>
 
         {/* third section - my projects */}
         <Box as="section" pb={10} px="5" backgroundColor={palette.mint_cream}>
@@ -93,7 +119,15 @@ export default function Home() {
         </Box>
 
         {/* divider */}
-        <Image src="/images/steps-two.svg" alt="steps" width={"full"} />
+        <Box position={"relative"} w={"100%"} h={"200px"}>
+          <Image
+            src="/images/steps-two.svg"
+            alt="divider image variant"
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </Box>
 
         {/* fourth section - contact me */}
         <Box as="section" py="10" px="5" backgroundColor={palette.viridian}>
@@ -143,10 +177,18 @@ export default function Home() {
           </Stack>
         </Box>
         {/* divider */}
-        <Image src="/images/steps-two-inv.svg" alt="steps" width={"full"} />
+        <Box position={"relative"} w={"100%"} h={"200px"}>
+          <Image
+            src="/images/steps-two-inv.svg"
+            alt="divider image variant"
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </Box>
 
         {/* footer */}
-        <Box as="footer" py="10" px="5" backgroundColor={palette.mint_cream} textAlign={"center"}>
+        <Box as="footer" pt="10" pb={"100px"} px="5" backgroundColor={palette.mint_cream} textAlign={"center"}>
           <Stack direction={"column"} mb={5}>
             <Heading as="h2" size="md">
               © Copyright {currentYear}, Luca Di Bello

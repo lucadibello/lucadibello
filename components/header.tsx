@@ -8,7 +8,7 @@ import { palette } from "@/theme";
 export default function Header() {
   return (
     <header>
-      <Box as="section" pb="10" pt={"200px"} px="5" w="full" backgroundColor={palette.mint_cream}>
+      <Box as="section" pb="10" pt={"150px"} px="5" w="full" backgroundColor={palette.mint_cream}>
         <Heading as="h1" size="lg">
           Hello there, I&apos;m Luca Di Bello 👋
         </Heading>

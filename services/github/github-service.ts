@@ -1,4 +1,4 @@
-import { GithubRepository, GithubUserReposApiResponse } from "./service"
+import { GithubRepository } from "./service"
 
 export async function getRepos(): Promise<GithubRepository[]> {
   if (!process.env.NEXT_PUBLIC_GITHUB_API) {

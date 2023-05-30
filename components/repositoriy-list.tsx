@@ -1,7 +1,7 @@
 import { GithubRepository } from "@/services/github/service";
 import { Stack, Text } from "@chakra-ui/react";
 import RepositoryCard from "./repository-card";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 interface RepositoryListProps {
   repositories: GithubRepository[]
