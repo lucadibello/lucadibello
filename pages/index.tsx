@@ -58,6 +58,7 @@ export default function Home() {
           {/* divider */}
           <Image
             src="/images/steps.svg"
+            priority={true}
             alt="steps"
             fill
             sizes="100vw"
@@ -107,7 +108,7 @@ export default function Home() {
 
           {/* Stack with repos */}
           <Skeleton isLoaded={!isLoadingRepos} w="full" minH={"300px"}>
-            <RepositoryList repositories={repos} />
+            <RepositoryList repositories={repos || []} />
 
             {/* view more on github  */}
             <Link href={process.env.NEXT_PUBLIC_GITHUB_URL!} target="_blank" rel="noopener noreferrer">
