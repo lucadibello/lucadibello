@@ -98,7 +98,7 @@ export default function Home() {
         </Box>
 
         {/* third section - my projects */}
-        <Box as="section" pb={10} px="5" backgroundColor={palette.mint_cream}>
+        <Box as="section" py={10} px="5" backgroundColor={palette.mint_cream}>
           <Heading as="h2" size="lg" mb="3">
             My projects 🚀
           </Heading>
