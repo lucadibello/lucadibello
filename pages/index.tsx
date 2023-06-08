@@ -10,6 +10,7 @@ import Head from "next/head";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { Link } from "@chakra-ui/next-js";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Home() {
   // States
@@ -100,6 +101,22 @@ export default function Home() {
         </script>
       </Head>
       <main>
+
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+        `}
+        </Script>
+
 
         {/* Pass IP to Header component */}
         <Header />
