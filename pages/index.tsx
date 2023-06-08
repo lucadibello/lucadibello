@@ -47,6 +47,57 @@ export default function Home() {
         <link rel="mask-icon" href="/favicons/apple/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#cce3de" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* JSON-LD */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Luca Di Bello",
+              "nationality": "Swiss",
+              "description": "Technology enthusiast, passionate about software development and computer science.",
+              "url": "https://lucadibello.dev",
+              "image": "https://avatars.githubusercontent.com/u/37295664?v=4",
+              "sameAs": "https://www.linkedin.com/in/luca-di-bello/",
+              "jobTitle": "Software Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "it flow",
+                "sameAs": [
+                  "https://www.itflow.xyz/",
+                  "https://www.instagram.com/itflow.xyz/",
+                  "https://www.linkedin.com/company/itflow-xyz/"
+                ]
+              },
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "USI",
+                "sameAs": "https://www.usi.ch/en"
+              },
+              "knowsAbout": [
+                "Software Engineering",
+                "Computer Science",
+                "Web Development",
+                "Mobile Development",
+                "DevOps",
+                "Cloud Computing",
+                "Machine Learning",
+                "Artificial Intelligence",
+                "Data Science",
+                "Database Design and Management",
+                "Computer Networks",
+                "Computer Security",
+                "Computer Architecture",
+                "Computer Graphics",
+                "Algorithms",
+                "Data Structures",
+                "Operating Systems",
+                "Programming Languages"
+              ]
+            }
+        `}
+        </script>
       </Head>
       <main>
 
