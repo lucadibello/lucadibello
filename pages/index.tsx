@@ -141,11 +141,10 @@ export default function Home() {
           </Heading>
           <Stack direction={"column"} spacing={5} mb={5}>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
-              I&apos;m a <Code bgColor={palette.mint_cream}>Software Engineer</Code> currently enrolled in the <Code bgColor={palette.mint_cream}>Master of Science in Informatics</Code> course at USI. <br />
+              I&apos;m a <Code bgColor={palette.mint_cream}>Software Engineer</Code> currently enrolled in the <Code bgColor={palette.mint_cream}>Master of Science in Informatics</Code> program at USI. <br />
             </Text>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
-              Ever since a young age, I have nurtured a profound passion for the world of computer science.
-              Throughout my journey, I have continuously pursued self-improvement and gained valuable hands-on experience.
+              From a young age, I have had a deep passion for the world of computer science. Throughout my journey, I have continuously pursued self-improvement and gained valuable hands-on experience.
             </Text>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
               I invite you to <Code bgColor={palette.mint_cream}>explore my portfolio</Code> and discover the projects I have worked on.
