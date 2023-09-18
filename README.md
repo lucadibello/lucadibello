@@ -1,4 +1,4 @@
-[![Header](./assets/header.png)](https://lucadibello.ch)
+[![Header](https://github.com/lucadibello/lucadibello/assets/37295664/7b28136c-2b92-4a78-8006-d12847b83feb)](https://lucadibello.ch)
 
 <!-- Badges -->
 <div id="badges">
