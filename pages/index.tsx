@@ -266,7 +266,7 @@ export default function Home() {
             </Text>
           </Stack>
         </Box>
-      </main >
+      </main>
     </>
   )
 }
