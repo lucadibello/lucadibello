@@ -1,4 +1,4 @@
-[![Header](https://github.com/lucadibello/lucadibello/assets/37295664/c6c7a1f9-83a1-4f41-8031-fa1e121e7dd5)](https://lucadibello.ch)
+[![Header](https://github.com/lucadibello/lucadibello/assets/37295664/28933f24-2264-4ead-8656-684c575e78f5)](https://lucadibello.ch)
 
 <!-- Badges -->
 <div id="badges">
