@@ -163,22 +163,23 @@ export default function Home() {
           <Stack direction={"column"} spacing={5} mb={5}>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
               I&apos;m a{" "}
-              <Code bgColor={palette.mint_cream}>Software Engineer</Code>
-              currently enrolled in the{" "}
+              <Code bgColor={palette.mint_cream}>Software Engineer</Code>{" "}
+              currently pursuing a{" "}
               <Code bgColor={palette.mint_cream}>
                 Master of Science in Informatics
-              </Code>
-              program at USI. <br />
+              </Code>{" "}
+              at USI. <br />
             </Text>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
-              Since an early age, I’ve been deeply passionate about computer
-              science. Over the years, I’ve continually sought self-improvement
-              and gained valuable hands-on experience along the way.
+              From a young age, I&apos;ve been passionate about computer science
+              and have consistently sought ways to improve my skills. Along the
+              way, I&apos;ve gained valuable hands-on experience across various
+              projects.
             </Text>
             <Text color={"white"} fontSize={"lg"} fontWeight={"bold"}>
               Feel free to{" "}
-              <Code bgColor={palette.mint_cream}>explore my portfolio</Code>
-              and check out the projects I’ve worked on.
+              <Code bgColor={palette.mint_cream}>explore my portfolio</Code> and
+              take a look at some of the projects I&apos;ve worked on.
             </Text>
           </Stack>
         </Box>
@@ -198,11 +199,12 @@ export default function Home() {
         {/* third section - my projects */}
         <Box as="section" py={10} px="5" backgroundColor={palette.mint_cream}>
           <Heading as="h2" size="lg" mb="3">
-            Projects I&apos;ve Worked On 🚀
+            Featured Projects 🚀
           </Heading>
           <Text size={"lg"} fontWeight="bold" mb={2}>
-            I’ve contributed to a variety of projects, both personal and
-            collaborative. Here are a few of the most notable ones.
+            I&apos;ve had the opportunity to contribute to a range of projects,
+            both individually and as part of a team. Below are some of the most
+            notable ones.
           </Text>
 
           {/* Stack with repos */}
