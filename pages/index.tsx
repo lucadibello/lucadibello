@@ -198,7 +198,7 @@ export default function Home() {
         {/* third section - my projects */}
         <Box as="section" py={10} px="5" backgroundColor={palette.mint_cream}>
           <Heading as="h2" size="lg" mb="3">
-            Projects I've Worked On 🚀
+            Projects I&apos;ve Worked On 🚀
           </Heading>
           <Text size={"lg"} fontWeight="bold" mb={2}>
             I’ve contributed to a variety of projects, both personal and
