@@ -1,11 +1,17 @@
-[![Header](https://github.com/lucadibello/lucadibello/assets/37295664/28933f24-2264-4ead-8656-684c575e78f5)](https://lucadibello.ch)
+# Luca Di Bello
 
-<!-- Badges -->
-<div id="badges">
-  <a href="https://www.linkedin.com/in/luca-di-bello/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="mailto:lucadibello@proton.me">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge"/>
-  </a>
-</div>
+Software engineer passionate about distributed systems, security, and backend infrastructure.
+I enjoy building systems that scale, communicate efficiently, and remain reliable under pressure.
+
+### What I work on
+- Distributed systems & networking (Mininet, Storm, P2P, traffic engineering)
+- Confidential computing (Intel SGX, Gramine, Teaclave, OpenEnclave)
+- Backend engineering (TypeScript/Node.js, Python, Rust, Java, C/C++, Solidity)
+- Modern web development (TypeScript, React/Next.js/Remix, full-stack architectures)
+- Security engineering (fuzzing, network analysis, zero-trust tooling)
+- HPC, numerical methods & performance work (MPI, PETSc)
+- Automation, developer tooling, and reproducible environments
+- Customizing and optimizing my development workflow (keyboards, Neovim, Zed, dotfiles)
+
+### Elsewhere
+[Website](https://lucadibello.ch) · [LinkedIn](https://linkedin.com/in/luca-di-bello)
