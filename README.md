@@ -11,7 +11,7 @@ I enjoy building systems that scale, communicate efficiently, and remain reliabl
 - Security engineering (fuzzing, network analysis, zero-trust tooling)
 - HPC, numerical methods & performance work (MPI, PETSc)
 - Automation, developer tooling, and reproducible environments
-- Customizing and optimizing my development workflow (keyboards, Neovim, Zed, dotfiles)
+- Customizing and optimizing my development workflow (ergonomic keyboards, Neovim, Zed, dotfiles)
 
 ### Elsewhere
 [Website](https://lucadibello.ch) · [LinkedIn](https://linkedin.com/in/luca-di-bello)
