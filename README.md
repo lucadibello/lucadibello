@@ -1,6 +1,6 @@
 # Luca Di Bello
 
-Software engineer passionate about distributed systems, security, and backend infrastructure.
+Software engineer passionate about distributed systems, security, and backend infrastructure.<br/>
 I enjoy building systems that scale, communicate efficiently, and remain reliable under pressure.
 
 ### What I work on
