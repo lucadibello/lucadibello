@@ -18,6 +18,18 @@ export function meta({}: Route.MetaArgs) {
 // ---------------------------------------------------------------------------
 // Server-side loader – repos are fetched at request time (SSR)
 // ---------------------------------------------------------------------------
+
+/** Only allow safe https:// URLs from env vars used as hrefs. */
+function safeUrl(value: string | undefined, fallback: string): string {
+  try {
+    const url = new URL(value ?? "");
+    if (url.protocol === "https:") return url.toString();
+  } catch {
+    // invalid URL — fall through to fallback
+  }
+  return fallback;
+}
+
 export async function loader() {
   const repos = await getRepos();
 
@@ -33,8 +45,8 @@ export async function loader() {
   return data({
     repos,
     maxProjects,
-    githubUrl: process.env.GITHUB_URL ?? "#",
-    linkedinUrl: process.env.LINKEDIN_URL ?? "#",
+    githubUrl: safeUrl(process.env.GITHUB_URL, "#"),
+    linkedinUrl: safeUrl(process.env.LINKEDIN_URL, "#"),
     mailEncoded,
   });
 }
