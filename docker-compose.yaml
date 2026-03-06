@@ -9,5 +9,6 @@ services:
   website:
     container_name: lucadibello-website
     image: lucadibello/website:latest
+    env_file: .env
     ports:
       - "80:3000"
