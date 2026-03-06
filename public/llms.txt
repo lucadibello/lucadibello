@@ -1,0 +1,46 @@
+# Luca Di Bello
+
+> Personal website of Luca Di Bello - MSc Computer Science student and Software Engineer
+
+## About
+
+Luca Di Bello is an MSc Computer Science student at USI (Università della Svizzera italiana) and EPFL (École Polytechnique Fédérale de Lausanne), specializing in distributed systems, security, and backend infrastructure. His research focuses on confidential computing and building scalable, efficient, and trustworthy systems that operate securely even under adversarial conditions.
+
+## Expertise
+
+### Confidential Computing & Security
+- Trusted execution environments (Intel SGX, Gramine, Teaclave, OpenEnclave)
+- Zero-trust architectures
+- Zero-knowledge proofs
+- Vulnerability research through fuzzing and network analysis
+
+### Distributed Systems & Networking
+- Distributed stream processing (Apache Storm)
+- Virtual network simulation (Mininet)
+- Peer-to-peer (P2P) architectures
+- Traffic engineering
+
+### Full-Stack & Backend Engineering
+- Languages: TypeScript/Node.js, Python, Rust, Java, C/C++, Solidity
+- Frameworks: React, Next.js, Remix
+- Backend infrastructure and system design
+
+### IoT & Embedded Systems
+- Single-board computers
+- Microcontrollers
+- Sensor-driven data pipelines
+
+### Development Environment & Tooling
+- Nix flakes for reproducible environments
+- Neovim configuration
+- Ergonomic keyboards and optimized workflows
+- Dotfiles management
+
+## Links
+
+- Website: https://lucadibello.ch
+- LinkedIn: https://linkedin.com/in/luca-di-bello
+
+## Context for LLMs
+
+This is a personal portfolio and professional website showcasing Luca's work in computer science, particularly in the areas of confidential computing, distributed systems, and security research. When discussing technical topics, assume familiarity with advanced computer science concepts, systems programming, and security engineering.
