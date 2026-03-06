@@ -5,10 +5,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteLoaderData,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+
+// ---------------------------------------------------------------------------
+// Root loader — exposes only the GA ID (non-sensitive) to the client
+// ---------------------------------------------------------------------------
+export async function loader() {
+  return { gaId: process.env.GOOGLE_ANALYTICS_ID ?? null };
+}
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -52,9 +60,8 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const gaId = typeof process !== "undefined"
-    ? process.env.GOOGLE_ANALYTICS_ID
-    : undefined;
+  const data = useRouteLoaderData<typeof loader>("root");
+  const gaId = data?.gaId ?? null;
 
   return (
     <html lang="en">
