@@ -207,9 +207,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 Confidential Computing &amp; Security
               </h3>
               <p className="text-base text-black/70 mb-3">
-                Trusted execution environments (Intel SGX, Gramine), zero-trust
-                architectures, zero-knowledge proofs, and vulnerability research
-                through fuzzing and network analysis.
+                Trusted execution environments (Intel SGX, Gramine,
+                OpenEnclave), zero-trust architectures, zero-knowledge proofs,
+                and vulnerability research through fuzzing and network analysis.
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {[
